@@ -2,7 +2,7 @@ from DB import get_session, TaskCategory, TaskItem, Agent
 from Globals import getenv
 from bravesdk import braveSDK
 from MagicalAuth import MagicalAuth
-from Conversations import get_conversation_name_by_id
+from Conversations import get_conversation_name_by_id 
 from sqlalchemy.orm import joinedload
 from concurrent.futures import ThreadPoolExecutor
 import datetime
