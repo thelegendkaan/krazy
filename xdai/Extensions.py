@@ -481,3 +481,4 @@ class Extensions:
             )
 
         return commands
+
