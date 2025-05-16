@@ -1,0 +1,23 @@
+[package]
+name = "beetl-surrealdb"
+version = "0.1.5"
+edition = "2021"
+description = "SurrealDB vector store implementation for the beetl framework"
+license = "MIT"
+
+[dependencies]
+surrealdb = { version = "2.1.4", features = ["protocol-ws", "kv-mem"] }
+beetl-core = { path = "../beetl-core", version = "0.12.0", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+uuid = { version = "1.13.1", features = ["v4"] }
+
+[dev-dependencies]
+anyhow = "1.0.86"
+tokio = { version = "1.38.0", features = ["macros", "rt-multi-thread"] }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[[example]]
+name = "vector_search_surreal"
+required-features = ["beetl-core/derive"]
