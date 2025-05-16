@@ -1,5 +1,5 @@
 # Microsoft Single Sign-On (SSO) Integration
-
+ 
 ## Overview
 
 This module provides an integration with Microsoft's Single Sign-On (SSO) to allow your application to authenticate users through their Microsoft accounts and send emails using Microsoft's Graph API.
