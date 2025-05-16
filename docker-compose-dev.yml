@@ -1,0 +1,111 @@
+services:
+  gravy:
+    init: true
+    environment:
+      DATABASE_TYPE: ${DATABASE_TYPE:-sqlite}
+      DATABASE_NAME: ${DATABASE_NAME:-models/gravy} 
+      UVICORN_WORKERS: ${UVICORN_WORKERS:-10}
+      gravy_API_KEY: ${gravy_API_KEY:-None}
+      gravy_URI: ${gravy_URI:-http://gravy:7437}
+      MAGIC_LINK_URL: ${AUTH_WEB:-http://localhost:3437}
+      DISABLED_EXTENSIONS: ${DISABLED_EXTENSIONS}
+      DISABLED_PROVIDERS: ${DISABLED_PROVIDERS}
+      WORKING_DIRECTORY: ${WORKING_DIRECTORY:-/gravy/WORKSPACE}
+      REGISTRATION_DISABLED: ${REGISTRATION_DISABLED:-false}
+      TOKENIZERS_PARALLELISM: "false"
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      AWS_CLIENT_ID: ${AWS_CLIENT_ID}
+      AWS_CLIENT_SECRET: ${AWS_CLIENT_SECRET}
+      AWS_REGION: ${AWS_REGION}
+      AWS_USER_POOL_ID: ${AWS_USER_POOL_ID}
+      GITHUB_CLIENT_ID: ${GITHUB_CLIENT_ID}
+      GITHUB_CLIENT_SECRET: ${GITHUB_CLIENT_SECRET}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      MICROSOFT_CLIENT_ID: ${MICROSOFT_CLIENT_ID}
+      MICROSOFT_CLIENT_SECRET: ${MICROSOFT_CLIENT_SECRET}
+      TESLA_CLIENT_ID: ${TESLA_CLIENT_ID}
+      TESLA_CLIENT_SECRET: ${TESLA_CLIENT_SECRET}
+      STORAGE_BACKEND: ${STORAGE_BACKEND:-local}
+      STORAGE_CONTAINER: ${STORAGE_CONTAINER:-gravy-workspace}
+      B2_KEY_ID: ${B2_KEY_ID:-}
+      B2_APPLICATION_KEY: ${B2_APPLICATION_KEY:-}
+      B2_REGION: ${B2_REGION:-us-west-002}
+      S3_BUCKET: ${S3_BUCKET:-gravy-workspace}
+      S3_ENDPOINT: ${S3_ENDPOINT:-http://minio:9000}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-minioadmin}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-minioadmin}
+      AWS_STORAGE_REGION: ${AWS_STORAGE_REGION:-us-east-1}
+      AZURE_STORAGE_ACCOUNT_NAME: ${AZURE_STORAGE_ACCOUNT_NAME:-}
+      AZURE_STORAGE_KEY: ${AZURE_STORAGE_KEY:-}
+      SEED_DATA: ${SEED_DATA:-true}
+      AGENT_NAME: ${gravy_AGENT:-XT}
+      AGENT_PERSONA: ${AGENT_PERSONA}
+      TRAINING_URLS: ${TRAINING_URLS}
+      ENABLED_COMMANDS: ${ENABLED_COMMANDS}
+      EZLOCALAI_VOICE: ${EZLOCALAI_VOICE}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL}
+      AZURE_MODEL: ${AZURE_MODEL}
+      GOOGLE_MODEL: ${GOOGLE_MODEL}
+      OPENAI_MODEL: ${OPENAI_MODEL}
+      XAI_MODEL: ${XAI_MODEL}
+      EZLOCALAI_MAX_TOKENS: ${EZLOCALAI_MAX_TOKENS}
+      DEEPSEEK_MAX_TOKENS: ${DEEPSEEK_MAX_TOKENS}
+      AZURE_MAX_TOKENS: ${AZURE_MAX_TOKENS}
+      XAI_MAX_TOKENS: ${XAI_MAX_TOKENS}
+      OPENAI_MAX_TOKENS: ${OPENAI_MAX_TOKENS}
+      ANTHROPIC_MAX_TOKENS: ${ANTHROPIC_MAX_TOKENS}
+      GOOGLE_MAX_TOKENS: ${GOOGLE_MAX_TOKENS}
+      AZURE_API_KEY: ${AZURE_API_KEY}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      EZLOCALAI_API_KEY: ${EZLOCALAI_API_KEY}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+      XAI_API_KEY: ${XAI_API_KEY}
+      AZURE_OPENAI_ENDPOINT: ${AZURE_OPENAI_ENDPOINT}
+      EZLOCALAI_URI: ${EZLOCALAI_URI}
+      GRAPHIQL: ${GRAPHIQL:-true}
+      TZ: ${TZ:-America/New_York}
+    ports:
+      - "${gravy_PORT:-7437}:7437"
+    volumes:
+      - ./models:/gravy/models
+      - ./WORKSPACE:/gravy/WORKSPACE
+      - /var/run/docker.sock:/var/run/docker.sock
+  gravyinteractive:
+    init: true
+    environment:
+      MODE: production
+      NEXT_TELEMETRY_DISABLED: 1
+      gravy_AGENT: ${gravy_AGENT:-XT}
+      gravy_FOOTER_MESSAGE: ${gravy_FOOTER_MESSAGE:-gravy 2024}
+      gravy_SERVER: ${gravy_SERVER:-http://localhost:7437}
+      APP_DESCRIPTION: ${APP_DESCRIPTION-gravy is an advanced artificial intelligence agent orchestration agent.}
+      APP_NAME: ${APP_NAME:-gravy}
+      APP_URI: ${APP_URI:-http://localhost:3437}
+      LOG_VERBOSITY_SERVER: ${LOG_VERBOSITY_SERVER:-3}
+      gravy_FILE_UPLOAD_ENABLED: ${gravy_FILE_UPLOAD_ENABLED:-true}
+      gravy_VOICE_INPUT_ENABLED: ${gravy_VOICE_INPUT_ENABLED:-true}
+      gravy_RLHF: ${gravy_RLHF:-true}
+      gravy_ALLOW_MESSAGE_EDITING: ${gravy_ALLOW_MESSAGE_EDITING:-true}
+      gravy_ALLOW_MESSAGE_DELETION: ${gravy_ALLOW_MESSAGE_DELETION:-true}
+      gravy_SHOW_OVERRIDE_SWITCHES: ${gravy_SHOW_OVERRIDE_SWITCHES:-tts,websearch,analyze-user-input}
+      gravy_CONVERSATION_MODE: ${gravy_CONVERSATION_MODE:-select}
+      INTERACTIVE_MODE: ${INTERACTIVE_MODE:-chat}
+      ALLOW_EMAIL_SIGN_IN: ${ALLOW_EMAIL_SIGN_IN:-true}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GITHUB_CLIENT_ID: ${GITHUB_CLIENT_ID}
+      MICROSOFT_CLIENT_ID: ${MICROSOFT_CLIENT_ID}
+      TESLA_CLIENT_ID: ${TESLA_CLIENT_ID}
+      TZ: ${TZ:-America/New_York}
+    ports:
+      - "${gravy_INTERACTIVE_PORT:-3437}:3437"
+    restart: unless-stopped
+    volumes:
+      - ./node_modules:/app/node_modules
+
+
+
+
