@@ -1,0 +1,2 @@
+Put your models in this folder for Text Generation Web UI and Stable Diffusion.
+
