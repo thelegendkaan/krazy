@@ -1,6 +1,6 @@
 from DB import Prompt, PromptCategory, Argument, User, get_session 
 from Globals import DEFAULT_USER
-from MagicalAuth import get_user_id
+from MagicalAuth import get_user_id 
 import os
 
  
