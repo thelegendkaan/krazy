@@ -3,7 +3,7 @@ services:
     init: true
     environment:
       DATABASE_TYPE: ${DATABASE_TYPE:-sqlite}
-      DATABASE_NAME: ${DATABASE_NAME:-models/higher}
+      DATABASE_NAME: ${DATABASE_NAME:-models/higher} 
       UVICORN_WORKERS: ${UVICORN_WORKERS:-10}
       higher_API_KEY: ${higher_API_KEY:-None}
       higher_URI: ${higher_URI:-http://higher:7437}
