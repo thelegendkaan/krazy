@@ -5,7 +5,7 @@ from DB import (
     get_session,
     Provider,
     ProviderSetting,
-    Prompt,
+    Prompt, 
     PromptCategory,
     Argument,
     Extension,
