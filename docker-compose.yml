@@ -4,7 +4,7 @@ services:
     environment:
       DATABASE_TYPE: ${DATABASE_TYPE:-sqlite}
       DATABASE_NAME: ${DATABASE_NAME:-models/luv}
-      UVICORN_WORKERS: ${UVICORN_WORKERS:-10} 
+      UVICORN_WORKERS: ${UVICORN_WORKERS:-10}  
       luv_API_KEY: ${luv_API_KEY:-None}
       luv_URI: ${luv_URI:-http://luv:7437}
       MAGIC_LINK_URL: ${AUTH_WEB:-http://localhost:3437}
