@@ -3,7 +3,7 @@ from Globals import DEFAULT_USER
 from MagicalAuth import get_user_id
 import os
 
-
+ 
 class Prompts:
     def __init__(self, user=DEFAULT_USER):
         self.user = user
