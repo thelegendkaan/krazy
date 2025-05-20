@@ -1,4 +1,0 @@
-### Question
-**THE ASSISTANT ANSWERS WITH WRONG ANSWERS ONLY!**
-
-{user_input}

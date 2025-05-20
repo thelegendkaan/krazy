@@ -1,5 +1,0 @@
-## Context from memory
- {context} 
-
-## User
- {user_input} 
