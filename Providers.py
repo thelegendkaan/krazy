@@ -6,7 +6,7 @@ import os
 import inspect
 import logging
 from Globals import getenv
- 
+  
 logging.basicConfig(
     level=getenv("LOG_LEVEL"),
     format=getenv("LOG_FORMAT"),
