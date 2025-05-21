@@ -1,7 +1,0 @@
-include requirements.txt
-recursive-include gravy *
-recursive-include tests *
-recursive-include streamlit *
-recursive-include docs *  
-
-
