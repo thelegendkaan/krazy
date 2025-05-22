@@ -3,7 +3,7 @@ from Globals import getenv
 from krazysdk import krazySDK
 from MagicalAuth import MagicalAuth
 from Conversations import get_conversation_name_by_id 
-from sqlalchemy.orm import joinedload
+from sqlalchemy.orm import joinedload 
 from concurrent.futures import ThreadPoolExecutor
 import datetime
 import logging
