@@ -5,7 +5,7 @@ from typing import List, Dict, Any
 
 class RotationProvider:
     """
-    The evie provider rotates between available providers to handle requested based on token limits.
+    The luv provider rotates between available providers to handle requested based on token limits.
     """
 
     def __init__(
@@ -13,7 +13,7 @@ class RotationProvider:
         SMARTEST_PROVIDER: str = "anthropic",  # Can be a comma-separated list
         **kwargs,
     ):
-        self.friendly_name = "evie"
+        self.friendly_name = "luv"
         self.requirements = []
         self.providers = get_providers()
         self.AGENT_SETTINGS = kwargs
@@ -23,7 +23,7 @@ class RotationProvider:
             self.intelligence_tiers = [SMARTEST_PROVIDER]
         self.failed_providers = set()
         self.smartest_provider = self.intelligence_tiers[0]
-        self.agent_name = kwargs.get("agent_name", "evie")
+        self.agent_name = kwargs.get("agent_name", "luv")
         self.user = kwargs.get("user", None)
         self.ApiClient = kwargs.get("ApiClient", None)
 
@@ -81,7 +81,7 @@ class RotationProvider:
         images = images or []
 
         # Remove providers that shouldn't be part of rotation
-        excluded_providers = {"evie", "rotation", "gpt4free", "default"}
+        excluded_providers = {"luv", "rotation", "gpt4free", "default"}
         self.providers = [p for p in self.providers if p not in excluded_providers]
         for provider in self.providers:
             if provider.upper() + "_API_KEY" not in self.AGENT_SETTINGS:

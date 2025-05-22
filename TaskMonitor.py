@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 def impersonate_user(user_id: str):
-    evie_API_KEY = getenv("evie_API_KEY")
+    luv_API_KEY = getenv("luv_API_KEY")
     # Get users email
     session = get_session()
     user = session.query(User).filter(User.id == user_id).first()
@@ -33,7 +33,7 @@ def impersonate_user(user_id: str):
             "email": email,
             "exp": datetime.now() + timedelta(days=1),
         },
-        evie_API_KEY,
+        luv_API_KEY,
         algorithm="HS256",
     )
     return token
