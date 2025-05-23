@@ -5,7 +5,7 @@ services:
       DATABASE_TYPE: ${DATABASE_TYPE:-sqlite}
       DATABASE_NAME: ${DATABASE_NAME:-models/krazy}
       UVICORN_WORKERS: ${UVICORN_WORKERS:-10} 
-      krazy_API_KEY: ${krazy_API_KEY:-None}
+      krazy_API_KEY: ${krazy_API_KEY:-None} 
       krazy_URI: ${krazy_URI:-http://krazy:7437}
       MAGIC_LINK_URL: ${AUTH_WEB:-http://localhost:3437}
       DISABLED_EXTENSIONS: ${DISABLED_EXTENSIONS}
