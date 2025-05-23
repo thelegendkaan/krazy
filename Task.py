@@ -1,6 +1,6 @@
 from DB import get_session, TaskCategory, TaskItem, Agent
 from Globals import getenv
-from eviesdk import evieSDK
+from eviesdk import evieSDK 
 from MagicalAuth import MagicalAuth
 from Conversations import get_conversation_name_by_id 
 from sqlalchemy.orm import joinedload
