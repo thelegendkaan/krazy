@@ -9,7 +9,7 @@ from DB import (
     PromptCategory,
     Argument,
     Extension,
-    Setting,
+    Setting, 
     Command,
     User,
     Agent,
