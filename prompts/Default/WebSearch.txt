@@ -14,7 +14,7 @@ Additional guidance for optimal search string suggestions:
 - For health or medical information, include terms like "site:.edu" along with "PubMed" or specific terms like "clinical trials" to focus on academic and clinically validated information, ensuring reliability in medical searches.
 - For legal or government information, use "site:.gov" for government-related information or specify domains like "site.gov" for legal documents, which can help target official publications and legal documents
 - For patent searches, include "site.gov" or "Google Patents" when searching for inventions and patents, which can directly lead to patent registries and related documents.
-- For product reviews, add "review" and "amazon" or other reputable review sites to find product reviews and ratings.
+- For product rluvws, add "rluvw" and "amazon" or other reputable rluvw sites to find product rluvws and ratings.
 - For travel information, include specific locations, dates, and travel-related terms to get the most relevant travel information.
 - For job and career-related searches, include specific job titles, companies, or job boards to find job listings, career advice, or company information. Include sites like "linkedin", "jobot", or "indeed" for job searches.
 - For real estate and housing market data, include specific real estate websites like "Zillow" or "Realtor.com" or add "MLS listings" when searching for housing market information, prices, or property details.

@@ -13,7 +13,7 @@ Arguments:
 We received the following output:
 {command_output}
 
-The validation for running the command has failed.  The goal of this validation is to assist in completing the task.  Review the command output and correct the issue. Respond with the corrected command to usage to get the proper intended output.
+The validation for running the command has failed.  The goal of this validation is to assist in completing the task.  Rluvw the command output and correct the issue. Respond with the corrected command to usage to get the proper intended output.
 
 If there are no commands, respond only with empty Json like {}. If there are commands to use from the Task Response, format them as follows in your response:
 
