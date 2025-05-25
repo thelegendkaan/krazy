@@ -1,13 +1,13 @@
 # Environment Variables
 
-The script sets up various environment variables for xdai. Some key variables and their purposes include:
+The script sets up various environment variables for futr. Some key variables and their purposes include:
 
-- `xdai_API_KEY`: API key for xdai (**automatically generated if not provided**)
-- `xdai_URI`: URI for the xdai API
-- `xdai_BRANCH`: xdai version to use (`stable` or `dev`)
-- `xdai_AUTO_UPDATE`: Whether to automatically update xdai
-- `xdai_RLHF`: Enable reinforcement learning from hxdain feedback (thumbs up/down buttons in UI)
-- `xdai_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
+- `futr_API_KEY`: API key for futr (**automatically generated if not provided**)
+- `futr_URI`: URI for the futr API
+- `futr_BRANCH`: futr version to use (`stable` or `dev`)
+- `futr_AUTO_UPDATE`: Whether to automatically update futr
+- `futr_RLHF`: Enable reinforcement learning from hfutrn feedback (thumbs up/down buttons in UI)
+- `futr_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
 - `AUTH_PROVIDER`: Authentication provider (`none` or `magicalauth`)
 - `INTERACTIVE_MODE`: Should always be set to `chat` (`form` mode is experimental)
 - `THEME_NAME`: UI color scheme (`default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)

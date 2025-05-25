@@ -1,7 +1,7 @@
 # xAI
 
 - [xAI](https://docs.x.ai/docs)
-- [xdai](https://github.com/jaymes081/xdai)
+- [futr](https://github.com/pmcvay1003/futr)
 
 ⚠️ **Please note that using some AI providers, such as xAI's API, can be expensive. Monitor your usage carefully to avoid incurring unexpected costs. We're NOT responsible for your usage under any circumstance.**
 

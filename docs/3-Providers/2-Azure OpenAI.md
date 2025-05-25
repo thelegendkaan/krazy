@@ -1,7 +1,7 @@
 # Azure OpenAI
 
 - [Azure OpenAI](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
-- [xdai](https://github.com/jaymes081/xdai)
+- [futr](https://github.com/pmcvay1003/futr)
 
 ⚠️ **Please note that using some AI providers, such as OpenAI's API, can be expensive. Monitor your usage carefully to avoid incurring unexpected costs. We're NOT responsible for your usage under any circumstance.**
 

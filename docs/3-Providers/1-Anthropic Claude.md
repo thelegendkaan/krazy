@@ -1,7 +1,7 @@
 # Anthropic Claude
 
 - [Anthropic Claude](https://console.anthropic.com/docs/access)
-- [xdai](https://github.com/jaymes081/xdai)
+- [futr](https://github.com/pmcvay1003/futr)
 
 ## Quick Start Guide
 
