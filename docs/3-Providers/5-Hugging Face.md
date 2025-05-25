@@ -1,7 +1,7 @@
 # Hugging Face
 
 - [Hugging Face](https://huggingface.co/docs/transformers/index)
-- [uma](https://github.com/viking45822/uma)
+- [xdai](https://github.com/jaymes081/xdai)
 
 ## Quick Start Guide
 

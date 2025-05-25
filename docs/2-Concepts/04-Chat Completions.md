@@ -1,10 +1,10 @@
-# uma Chat Completions
+# xdai Chat Completions
 
-The uma Chat Completions endpoint matches the behavior of the OpenAI Chat Completions API, but with additional features and functionality based on running prompt templates, commands, and chains according to the agent's settings and `mode`.
+The xdai Chat Completions endpoint matches the behavior of the OpenAI Chat Completions API, but with additional features and functionality based on running prompt templates, commands, and chains according to the agent's settings and `mode`.
 
 ## Overview
 
-uma is an AI agent orchestration framework that provides a chat completions workflow similar to OpenAI's Chat Completions API, but with enhanced capabilities. The system can handle various input types, process files, perform data analysis, and execute different modes of operation.
+xdai is an AI agent orchestration framework that provides a chat completions workflow similar to OpenAI's Chat Completions API, but with enhanced capabilities. The system can handle various input types, process files, perform data analysis, and execute different modes of operation.
 
 ## Workflow Stages
 
@@ -63,7 +63,7 @@ If no mode is defined, the chat completions endpoint will use the `Chat` prompt 
 
 ## File Handling and Data Analysis
 
-uma has advanced capabilities for handling various file types and performing data analysis:
+xdai has advanced capabilities for handling various file types and performing data analysis:
 
 - Supports multiple file types: CSV, PDF, ZIP, Excel (XLSX, XLS), Word (DOC, DOCX), audio files, and images
 - CSV file analysis:
@@ -91,13 +91,13 @@ uma has advanced capabilities for handling various file types and performing dat
 
 ## Usage Example and Field Descriptions
 
-To use the `openai` Python package to interact with uma agents, you can use the following code snippet:
+To use the `openai` Python package to interact with xdai agents, you can use the following code snippet:
 
 ```python
 import openai
 
 openai.base_url = "http://localhost:7437/v1/"
-openai.api_key = "Your uma API Key"
+openai.api_key = "Your xdai API Key"
 openai.api_type = "openai"
 
 response = openai.chat.completions.create(
@@ -121,9 +121,9 @@ response = openai.chat.completions.create(
                 },
                 {
                     "type": "text_url",
-                    "file_name": "uma_info.txt",
+                    "file_name": "xdai_info.txt",
                     "text_url": {
-                        "url": "https://uma.com"
+                        "url": "https://xdai.com"
                     },
                     "collection_number": "0", # Save to collection 0 instead of the conversational memories
                 },
@@ -160,7 +160,7 @@ print(response.choices[0].message.content)
 
 ### Field Descriptions
 
-- `model`: The name of the uma agent you want to interact with.
+- `model`: The name of the xdai agent you want to interact with.
 - `user`: The conversation name you want to use. This helps maintain context across multiple interactions.
 - `create_image`: Set to "true" to generate an image using the agent's designated image provider and send it with the response.
 - `context_results`: The number of relevant memories to inject into the conversation. Default is 5 if not set.

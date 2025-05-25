@@ -1,4 +1,4 @@
-# uma
+# xdai
 
 ## Quick Start Guide
 
@@ -25,8 +25,8 @@ Provide the following prerequisites based on the Operating System you use.
 If you're using Linux, you may need to prefix the `python` command with `sudo` depending on your system configuration.
 
 ```bash
-git clone https://github.com/viking45822/uma
-cd uma
+git clone https://github.com/jaymes081/xdai
+cd xdai
 python start.py
 ```
 
@@ -43,7 +43,7 @@ Run the script with Python:
 python start.py
 ```
 
-To run uma with ezLocalai, use the `--with-ezlocalai` flag:
+To run xdai with ezLocalai, use the `--with-ezlocalai` flag:
 
 ```bash
 python start.py --with-ezlocalai
@@ -52,33 +52,33 @@ python start.py --with-ezlocalai
 You can also use command-line arguments to set specific environment variables to run in different ways. For example, to use the development branch and enable auto-updates, run:
 
 ```bash
-python start.py --uma-branch dev --uma-auto-update true --with-ezlocalai
+python start.py --xdai-branch dev --xdai-auto-update true --with-ezlocalai
 ```
 
-- Access the uma Management interface at <http://localhost:8501> to create and manage your agents, prompts, chains, and configurations.
-- Access the uma Interactive interface at <http://localhost:3437> to interact with your configured agents.
-- Access the uma API documentation at <http://localhost:7437>
+- Access the xdai Management interface at <http://localhost:8501> to create and manage your agents, prompts, chains, and configurations.
+- Access the xdai Interactive interface at <http://localhost:3437> to interact with your configured agents.
+- Access the xdai API documentation at <http://localhost:7437>
 
 ### Command-line Options
 
 The script supports setting any of the environment variables via command-line arguments. Here's a detailed list of available options:
 
-1. `--uma-api-key`: Set the uma API key (automatically generated if not provided)
-2. `--uma-uri`: Set the uma URI (default: `http://localhost:7437`)
-3. `--uma-agent`: Set the default uma agent (default: `uma`)
-4. `--uma-branch`: Choose between `stable` and `dev` branches
-5. `--uma-file-upload-enabled`: Enable or disable file uploads (default: `true`)
-6. `--uma-voice-input-enabled`: Enable or disable voice input (default: `true`)
-7. `--uma-footer-message`: Set the footer message (default: `Powered by uma`)
-8. `--uma-require-api-key`: Require API key for access (default: `false`)
-9. `--uma-rlhf`: Enable or disable reinforcement learning from human feedback (default: `true`)
-10. `--uma-show-selection`: Set which selectors to show in the UI (default: `conversation,agent`)
-11. `--uma-show-agent-bar`: Show or hide the agent bar in the UI (default: `true`)
-12. `--uma-show-app-bar`: Show or hide the app bar in the UI (default: `true`)
-13. `--uma-conversation-mode`: Set the conversation mode (default: `select`)
+1. `--xdai-api-key`: Set the xdai API key (automatically generated if not provided)
+2. `--xdai-uri`: Set the xdai URI (default: `http://localhost:7437`)
+3. `--xdai-agent`: Set the default xdai agent (default: `xdai`)
+4. `--xdai-branch`: Choose between `stable` and `dev` branches
+5. `--xdai-file-upload-enabled`: Enable or disable file uploads (default: `true`)
+6. `--xdai-voice-input-enabled`: Enable or disable voice input (default: `true`)
+7. `--xdai-footer-message`: Set the footer message (default: `Powered by xdai`)
+8. `--xdai-require-api-key`: Require API key for access (default: `false`)
+9. `--xdai-rlhf`: Enable or disable reinforcement learning from hxdain feedback (default: `true`)
+10. `--xdai-show-selection`: Set which selectors to show in the UI (default: `conversation,agent`)
+11. `--xdai-show-agent-bar`: Show or hide the agent bar in the UI (default: `true`)
+12. `--xdai-show-app-bar`: Show or hide the app bar in the UI (default: `true`)
+13. `--xdai-conversation-mode`: Set the conversation mode (default: `select`)
 14. `--allowed-domains`: Set allowed domains for API access (default: `*`)
 15. `--app-description`: Set the application description
-16. `--app-name`: Set the application name (default: `uma Chat`)
+16. `--app-name`: Set the application name (default: `xdai Chat`)
 17. `--app-uri`: Set the application URI (default: `http://localhost:3437`)
 18. `--auth-web`: Set the authentication web URI (default: `http://localhost:3437/user`)
 19. `--auth-provider`: Set the authentication provider (options: `none`, `magicalauth`)
@@ -96,15 +96,15 @@ The script supports setting any of the environment variables via command-line ar
 31. `--theme-name`: Set the UI theme (options: `default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)
 32. `--allow-email-sign-in`: Allow email sign-in (default: `true`)
 33. `--database-type`: Set the database type (options: `sqlite`, `postgres`)
-34. `--database-name`: Set the database name (default: `models/uma`)
+34. `--database-name`: Set the database name (default: `models/xdai`)
 35. `--log-level`: Set the logging level (default: `INFO`)
 36. `--log-format`: Set the log format (default: `%(asctime)s | %(levelname)s | %(message)s`)
 38. `--uvicorn-workers`: Set the number of Uvicorn workers (default: `10`)
-39. `--uma-auto-update`: Enable or disable auto-updates (default: `true`)
+39. `--xdai-auto-update`: Enable or disable auto-updates (default: `true`)
 
 Options specific to ezLocalai:
 
-1. `--with-ezlocalai`: Start uma with ezLocalai integration.
+1. `--with-ezlocalai`: Start xdai with ezLocalai integration.
 2. `--ezlocalai-uri`: Set the ezLocalai URI (default: `http://{local_ip}:8091`)
 3. `--default-model`: Set the default language model for ezLocalai (default: `QuantFactory/dolphin-2.9.2-qwen2-7b-GGUF`)
 4. `--vision-model`: Set the vision model for ezLocalai (default: `deepseek-ai/deepseek-vl-1.3b-chat`)
@@ -122,9 +122,9 @@ python start.py --help
 
 After setting up the environment variables and ensuring Docker and Docker Compose are installed, the script will:
 
-1. Stop any running uma Docker containers
+1. Stop any running xdai Docker containers
 2. Pull the latest Docker images (if auto-update is enabled)
-3. Start the uma services using Docker Compose
+3. Start the xdai services using Docker Compose
 
 ## Troubleshooting
 
@@ -138,6 +138,6 @@ After setting up the environment variables and ensuring Docker and Docker Compos
 
 ## Security Considerations
 
-- The `uma_API_KEY` is automatically generated if not provided. Ensure to keep this key secure and do not share it publicly.
+- The `xdai_API_KEY` is automatically generated if not provided. Ensure to keep this key secure and do not share it publicly.
 - When using authentication providers (GitHub, Google, Microsoft), ensure that the client IDs and secrets are kept confidential.
 - Be cautious when enabling file uploads and voice input, as these features may introduce potential security risks if not properly managed.

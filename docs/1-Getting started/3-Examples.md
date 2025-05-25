@@ -1,25 +1,25 @@
 # Examples
 
-We plan to build more examples but would love to see what you build with uma.  If you have an example you would like to share, please submit a pull request to add it to this page.
+We plan to build more examples but would love to see what you build with xdai.  If you have an example you would like to share, please submit a pull request to add it to this page.
 
 ## Expert Agent Example
 
-Example of a basic uma expert agent:  Create your agent, make it learn from whichever files or websites you want. You can try it out in the same notebook and in the web interface.
+Example of a basic xdai expert agent:  Create your agent, make it learn from whichever files or websites you want. You can try it out in the same notebook and in the web interface.
 
 You can open this file in a Jupyter Notebook and run the code cells to see the example in action.
 
-- [ezLocalai Example](https://github.com/viking45822/uma/blob/main/examples/uma-Expert-ezLocalai.ipynb)
-- [OpenAI Example](https://github.com/viking45822/uma/blob/main/examples/uma-Expert-OAI.ipynb)
+- [ezLocalai Example](https://github.com/jaymes081/xdai/blob/main/examples/xdai-Expert-ezLocalai.ipynb)
+- [OpenAI Example](https://github.com/jaymes081/xdai/blob/main/examples/xdai-Expert-OAI.ipynb)
 
 ## Voice Chat Example
 
-Example of a basic uma voice chat: Make the agent listen to you saying a specific word that makes it take what you say, send it to the agent, and then execute an uma function. In this example, you can use two different wake functions, `chat` and `instruct`. When this example is running, and you say each of the wake words, it will take the words you say after that, send them to the agent, and respond back to you with an audio response.
+Example of a basic xdai voice chat: Make the agent listen to you saying a specific word that makes it take what you say, send it to the agent, and then execute an xdai function. In this example, you can use two different wake functions, `chat` and `instruct`. When this example is running, and you say each of the wake words, it will take the words you say after that, send them to the agent, and respond back to you with an audio response.
 
-You can open this file in a Jupyter Notebook and run the code cells to see the example in action. <https://github.com/viking45822/uma/blob/main/examples/Voice.ipynb>
+You can open this file in a Jupyter Notebook and run the code cells to see the example in action. <https://github.com/jaymes081/xdai/blob/main/examples/Voice.ipynb>
 
 ## OpenAI Style Chat Completions Endpoint Example
 
-See the details of this [pull request](https://github.com/viking45822/uma/pull/1149) for example usage of the chat completions endpoint in uma.
+See the details of this [pull request](https://github.com/jaymes081/xdai/pull/1149) for example usage of the chat completions endpoint in xdai.
 
 - Built in accommodations for uploading audio, files, or images to the pipeline of chat completions.
 - Adds support for the `gpt-4-vision-preview` model allowing images to be uploaded with the same syntax. Follow syntax from OpenAI documentation on how your request should look to send images <https://platform.openai.com/docs/guides/vision>
@@ -57,7 +57,7 @@ response = openai.chat.completions.create(
                 {
                     "type": "text_url",  # Or just "url"
                     "url": {  # Content of the text or URL for it to be scraped
-                        "url": "https://uma.com"
+                        "url": "https://xdai.com"
                     },
                     "collection_number": 0,  # Optional field, defaults to 0.
                 },

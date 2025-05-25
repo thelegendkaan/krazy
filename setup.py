@@ -16,21 +16,19 @@ requirements = []
 for reqs in install_requires:
     if "--" not in reqs and ":" not in reqs and "#" not in reqs:
         requirements.append(reqs)
-# Get version from version file in uma/version
-with open(os.path.join(this_directory, "uma/version"), encoding="utf-8") as f:
+# Get version from version file in xdai/version
+with open(os.path.join(this_directory, "xdai/version"), encoding="utf-8") as f:
     version = f.read().strip()
 
 setup(
-    name="uma",
+    name="xdai",
     version=version,
     description="An Artificial Intelligence Automation Platform. AI Instruction management from various providers, has an adaptive memory, and a versatile plugin system with many commands including web browsing. Supports many AI providers and models and growing support every day.",
     long_description=long_description,
     long_description_content_type="text/markdown",  # This should match the format of your README
-    author="uma",
+    author="xdai",
     packages=find_packages(),
     python_requires=">=3.10",
     install_requires=requirements,
 )
-
-
 

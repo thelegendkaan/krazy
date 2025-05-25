@@ -1,7 +1,7 @@
 # GPT4Free
 
 - [GPT4Free](https://github.com/xtekky/gpt4free)
-- [uma](https://github.com/viking45822/uma)
+- [xdai](https://github.com/jaymes081/xdai)
 
 ## Disclaimer
 

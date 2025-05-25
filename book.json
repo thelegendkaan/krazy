@@ -1,7 +1,7 @@
 {
   "gitbook": ">=3.0.0",
-  "title": "uma",
-  "description": "uma is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, uma delivers efficient and comprehensive AI solutions.",
+  "title": "xdai",
+  "description": "xdai is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, xdai delivers efficient and comprehensive AI solutions.",
   "root": "./docs/",
   "structure": {
     "readme": "README.md",
@@ -18,11 +18,11 @@
       "minTocSize": 2
     },
     "github-issue-feedback": {
-      "repo": "viking45822/uma",
+      "repo": "jaymes081/xdai",
       "label": "Submit an issue"
     },
     "edit-link": {
-      "base": "https://github.com/viking45822/uma/edit/master/docs/",
+      "base": "https://github.com/jaymes081/xdai/edit/master/docs/",
       "label": "Edit"
     }
   },
@@ -30,5 +30,3 @@
     "fontFamily": "IPAexMincho"
   }
 }
-
-
