@@ -1,12 +1,12 @@
-# Futr AI
+# brave AI
 
-Futr is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, futr stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, futr is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
+brave is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, brave stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, brave is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
 
-Embracing the spirit of extremity in every facet of life, we introduce futr. This advanced AI Automation Platform is our bold step towards the realization of Artificial General Intelligence (AGI). Seamlessly orchestrating instruction management and executing complex tasks across diverse AI providers, futr combines adaptive memory, smart features, and a versatile plugin system to maximize AI potential. With our unwavering commitment to innovation, we're dedicated to pushing the boundaries of AI and bringing AGI closer to reality.
+Embracing the spirit of extremity in every facet of life, we introduce brave. This advanced AI Automation Platform is our bold step towards the realization of Artificial General Intelligence (AGI). Seamlessly orchestrating instruction management and executing complex tasks across diverse AI providers, brave combines adaptive memory, smart features, and a versatile plugin system to maximize AI potential. With our unwavering commitment to innovation, we're dedicated to pushing the boundaries of AI and bringing AGI closer to reality.
 
 ## Table of Contents 📖
 
-- [futr](#futr)
+- [brave](#brave)
   - [Table of Contents 📖](#table-of-contents-)
   - [⚠️ Disclaimers](#️-disclaimers)
     - [Monitor Your Usage](#monitor-your-usage)
@@ -48,7 +48,7 @@ Please note that using some AI providers (such as OpenAI's GPT-4 API) can be exp
 - **RESTful API**: FastAPI-powered RESTful API for seamless integration with external applications and services.
 - **Expanding AI Support**: Continually updated to include new AI providers and services, ensuring the software stays at the forefront of AI technology.
 
-The features that futr provides cover a wide range of services and are used for different tasks. Refer to [Processes and Frameworks](https://pmcvay1003.github.io/futr/2-Concepts/01-Processes%20and%20Frameworks.html) for more details about the services and framework.
+The features that brave provides cover a wide range of services and are used for different tasks. Refer to [Processes and Frameworks](https://delmenhorst09.github.io/brave/2-Concepts/01-Processes%20and%20Frameworks.html) for more details about the services and framework.
 
 ## Quick Start Guide
 
@@ -75,8 +75,8 @@ Provide the following prerequisites based on the Operating System you use.
 If you're using Linux, you may need to prefix the `python` command with `sudo` depending on your system configuration.
 
 ```bash
-git clone https://github.com/pmcvay1003/futr
-cd futr
+git clone https://github.com/delmenhorst09/brave
+cd brave
 python start.py
 ```
 
@@ -93,7 +93,7 @@ Run the script with Python:
 python start.py
 ```
 
-To run futr with ezLocalai, use the `--with-ezlocalai` flag:
+To run brave with ezLocalai, use the `--with-ezlocalai` flag:
 
 ```bash
 python start.py --with-ezlocalai true
@@ -102,38 +102,38 @@ python start.py --with-ezlocalai true
 You can also use command-line arguments to set specific environment variables to run in different ways. For example, to use the development branch and enable auto-updates, run:
 
 ```bash
-python start.py --futr-branch dev --futr-auto-update true --with-ezlocalai true
+python start.py --brave-branch dev --brave-auto-update true --with-ezlocalai true
 ```
 
-- Access the futr Management interface at <http://localhost:8501> to create and manage your agents, prompts, chains, and configurations.
-- Access the futr Interactive interface at <http://localhost:3437> to interact with your configured agents.
-- Access the futr API documentation at <http://localhost:7437>
+- Access the brave Management interface at <http://localhost:8501> to create and manage your agents, prompts, chains, and configurations.
+- Access the brave Interactive interface at <http://localhost:3437> to interact with your configured agents.
+- Access the brave API documentation at <http://localhost:7437>
 
 ### Command-line Options
 
 The script supports setting any of the environment variables via command-line arguments. Here's a detailed list of available options:
 
-1. `--futr-api-key`: Set the futr API key (automatically generated if not provided)
-2. `--futr-uri`: Set the futr URI (default: `http://localhost:7437`)
-3. `--futr-agent`: Set the default futr agent (default: `futr`)
-4. `--futr-branch`: Choose between `stable` and `dev` branches
-5. `--futr-file-upload-enabled`: Enable or disable file uploads (default: `true`)
-6. `--futr-voice-input-enabled`: Enable or disable voice input (default: `true`)
-7. `--futr-footer-message`: Set the footer message (default: `Powered by futr`)
-8. `--futr-require-api-key`: Require API key for access (default: `false`)
-9. `--futr-rlhf`: Enable or disable reinforcement learning from hfutrn feedback (default: `true`)
-10. `--futr-show-selection`: Set which selectors to show in the UI (default: `conversation,agent`)
-11. `--futr-show-agent-bar`: Show or hide the agent bar in the UI (default: `true`)
-12. `--futr-show-app-bar`: Show or hide the app bar in the UI (default: `true`)
-13. `--futr-conversation-mode`: Set the conversation mode (default: `select`)
+1. `--brave-api-key`: Set the brave API key (automatically generated if not provided)
+2. `--brave-uri`: Set the brave URI (default: `http://localhost:7437`)
+3. `--brave-agent`: Set the default brave agent (default: `brave`)
+4. `--brave-branch`: Choose between `stable` and `dev` branches
+5. `--brave-file-upload-enabled`: Enable or disable file uploads (default: `true`)
+6. `--brave-voice-input-enabled`: Enable or disable voice input (default: `true`)
+7. `--brave-footer-message`: Set the footer message (default: `Powered by brave`)
+8. `--brave-require-api-key`: Require API key for access (default: `false`)
+9. `--brave-rlhf`: Enable or disable reinforcement learning from hbraven feedback (default: `true`)
+10. `--brave-show-selection`: Set which selectors to show in the UI (default: `conversation,agent`)
+11. `--brave-show-agent-bar`: Show or hide the agent bar in the UI (default: `true`)
+12. `--brave-show-app-bar`: Show or hide the app bar in the UI (default: `true`)
+13. `--brave-conversation-mode`: Set the conversation mode (default: `select`)
 14. `--allowed-domains`: Set allowed domains for API access (default: `*`)
 15. `--app-description`: Set the application description
-16. `--app-name`: Set the application name (default: `futr Chat`)
+16. `--app-name`: Set the application name (default: `brave Chat`)
 17. `--app-uri`: Set the application URI (default: `http://localhost:3437`)
 18. `--auth-web`: Set the authentication web URI (default: `http://localhost:3437/user`)
 19. `--auth-provider`: Set the authentication provider (options: `none`, `magicalauth`)
-20. `--create-agent-on-register`: Create an agent named from your `futr_AGENT` environment variable if it is different than `futr` using settings from `default_agent.json` if defined (default: `true`)
-21. `--create-futr-agent`: Create an agent called `futr` and trains it on the futr documentation upon user registration (default: `true`)
+20. `--create-agent-on-register`: Create an agent named from your `brave_AGENT` environment variable if it is different than `brave` using settings from `default_agent.json` if defined (default: `true`)
+21. `--create-brave-agent`: Create an agent called `brave` and trains it on the brave documentation upon user registration (default: `true`)
 22. `--disabled-providers`: Set disabled providers (comma-separated list)
 23. `--disabled-extensions`: Set disabled extensions (comma-separated list)
 24. `--working-directory`: Set the working directory (default: `./WORKSPACE`)
@@ -148,15 +148,15 @@ The script supports setting any of the environment variables via command-line ar
 33. `--theme-name`: Set the UI theme (options: `default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)
 34. `--allow-email-sign-in`: Allow email sign-in (default: `true`)
 35. `--database-type`: Set the database type (options: `sqlite`, `postgres`)
-36. `--database-name`: Set the database name (default: `models/futr`)
+36. `--database-name`: Set the database name (default: `models/brave`)
 37. `--log-level`: Set the logging level (default: `INFO`)
 38. `--log-format`: Set the log format (default: `%(asctime)s | %(levelname)s | %(message)s`)
 40. `--uvicorn-workers`: Set the number of Uvicorn workers (default: `10`)
-41. `--futr-auto-update`: Enable or disable auto-updates (default: `true`)
+41. `--brave-auto-update`: Enable or disable auto-updates (default: `true`)
 
 Options specific to ezLocalai:
 
-1. `--with-ezlocalai`: Start futr with ezLocalai integration.
+1. `--with-ezlocalai`: Start brave with ezLocalai integration.
 2. `--ezlocalai-uri`: Set the ezLocalai URI (default: `http://{local_ip}:8091`)
 3. `--default-model`: Set the default language model for ezLocalai (default: `QuantFactory/dolphin-2.9.2-qwen2-7b-GGUF`)
 4. `--vision-model`: Set the vision model for ezLocalai (default: `deepseek-ai/deepseek-vl-1.3b-chat`)
@@ -174,9 +174,9 @@ python start.py --help
 
 After setting up the environment variables and ensuring Docker and Docker Compose are installed, the script will:
 
-1. Stop any running futr Docker containers
+1. Stop any running brave Docker containers
 2. Pull the latest Docker images (if auto-update is enabled)
-3. Start the futr services using Docker Compose
+3. Start the brave services using Docker Compose
 
 ## Troubleshooting
 
@@ -190,18 +190,18 @@ After setting up the environment variables and ensuring Docker and Docker Compos
 
 ## Security Considerations
 
-- The `futr_API_KEY` is automatically generated if not provided. Ensure to keep this key secure and do not share it publicly.
+- The `brave_API_KEY` is automatically generated if not provided. Ensure to keep this key secure and do not share it publicly.
 - When using authentication providers (GitHub, Google, Microsoft), ensure that the client IDs and secrets are kept confidential.
 - Be cautious when enabling file uploads and voice input, as these features may introduce potential security risks if not properly managed.
 
 ## Configuration
 
-Each futr Agent has its own settings for interfacing with AI providers, and other configuration options. These settings can be set and modified through the web interface.
+Each brave Agent has its own settings for interfacing with AI providers, and other configuration options. These settings can be set and modified through the web interface.
 
 ## Documentation
 
-Need more information? Check out the documentation for more details to get a better understanding of the concepts and features of futr.
+Need more information? Check out the documentation for more details to get a better understanding of the concepts and features of brave.
 
 ## Other Repositories
 
-Check out the other futr repositories - these include the futr Streamlit Web UI, futr Python SDK, futr TypeScript SDK, futr Dart SDK, futr C# SDK, and more!
+Check out the other brave repositories - these include the brave Streamlit Web UI, brave Python SDK, brave TypeScript SDK, brave Dart SDK, brave C# SDK, and more!

@@ -1,6 +1,6 @@
-# futr Extensions
+# brave Extensions
 
-futr extensions are modular components that provide additional capabilities to AI agents through a "bolt-on" architecture. This approach allows for seamless integration of new functionalities without modifying the core system.
+brave extensions are modular components that provide additional capabilities to AI agents through a "bolt-on" architecture. This approach allows for seamless integration of new functionalities without modifying the core system.
 
 ## Authentication & Context Management
 
@@ -10,13 +10,13 @@ Extensions receive several key pieces of context during initialization:
 
 ```python
 def __init__(self, **kwargs):
-    # futr SDK initialized with user's JWT
-    self.ApiClient = kwargs["ApiClient"] if "ApiClient" in kwargs else futrSDK(
-        base_uri=getenv("futr_URI"),
+    # brave SDK initialized with user's JWT
+    self.ApiClient = kwargs["ApiClient"] if "ApiClient" in kwargs else braveSDK(
+        base_uri=getenv("brave_URI"),
         api_key=kwargs["api_key"] if "api_key" in kwargs else "",
     )
     
-    # User's futr JWT for authentication
+    # User's brave JWT for authentication
     self.api_key = kwargs["api_key"] if "api_key" in kwargs else ""
     
     # Agent and conversation context
@@ -31,9 +31,9 @@ def __init__(self, **kwargs):
     self.settings = kwargs  # Contains any additional extension-specific settings
 ```
 
-## futr SDK Integration
+## brave SDK Integration
 
-Extensions can leverage the futr SDK ([PyPI](https://pypi.org/project/futrsdk) | [GitHub](https://github.com/futr/python-sdk)) to interact with core futr functionality. The SDK is automatically injected via `self.ApiClient` and initialized with the user's context.
+Extensions can leverage the brave SDK ([PyPI](https://pypi.org/project/bravesdk) | [GitHub](https://github.com/brave/python-sdk)) to interact with core brave functionality. The SDK is automatically injected via `self.ApiClient` and initialized with the user's context.
 
 ### Common SDK Operations
 
@@ -170,12 +170,12 @@ self.ApiClient.new_conversation_message(
    - Prevent recursive command execution
    - Maintain clean conversation logs
 
-The SDK provides a comprehensive interface to futr's capabilities, allowing extensions to leverage the full power of the platform while maintaining proper context and security boundaries. Proper use of control flags ensures efficient resource usage and prevents potential issues like recursive command execution or cluttered conversation logs.
+The SDK provides a comprehensive interface to brave's capabilities, allowing extensions to leverage the full power of the platform while maintaining proper context and security boundaries. Proper use of control flags ensures efficient resource usage and prevents potential issues like recursive command execution or cluttered conversation logs.
 
 ### Important Considerations
 
-1. Always use `self.ApiClient` for futr API operations to maintain user context, it is automatically injected into `kwargs`.
-2. Use `self.api_key` (user's JWT) for any operations requiring authentication, this is reserved specifically for futr API calls. If using a different API, prepend the `api_key` variable name with the extension name, such as `OURA_API_KEY`.
+1. Always use `self.ApiClient` for brave API operations to maintain user context, it is automatically injected into `kwargs`.
+2. Use `self.api_key` (user's JWT) for any operations requiring authentication, this is reserved specifically for brave API calls. If using a different API, prepend the `api_key` variable name with the extension name, such as `OURA_API_KEY`.
 3. Respect the working directory boundaries for file operations, the agent should not work outside of `self.WORKING_DIRECTORY` at any time. This will contain file operations to the specific conversation.
 4. Access extension-specific settings through `kwargs`. These settings are automatically injected and can be used to configure extension behavior.
 5. Maintain conversation context for continuity
@@ -225,7 +225,7 @@ Example agent settings flow:
 
 ## Core Extensions Overview
 
-### futr Actions Extension
+### brave Actions Extension
 
 Provides high-level orchestration and coordination capabilities across other extensions.
 
@@ -395,7 +395,7 @@ class your_extension(Extensions):
 
 ### Docstring Design
 
-Docstrings are crucial for futr extensions as they serve as the primary guidance for AI agents to understand when and how to use commands. Well-designed docstrings should include:
+Docstrings are crucial for brave extensions as they serve as the primary guidance for AI agents to understand when and how to use commands. Well-designed docstrings should include:
 
 #### Extension Class Docstring
 

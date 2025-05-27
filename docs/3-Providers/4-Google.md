@@ -1,7 +1,7 @@
 # Google Gemini
 
 - [Google Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini)
-- [futr](https://github.com/pmcvay1003/futr)
+- [brave](https://github.com/delmenhorst09/brave)
 
 ## Quick Start Guide
 

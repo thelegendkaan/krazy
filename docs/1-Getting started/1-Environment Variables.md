@@ -1,13 +1,13 @@
 # Environment Variables
 
-The script sets up various environment variables for futr. Some key variables and their purposes include:
+The script sets up various environment variables for brave. Some key variables and their purposes include:
 
-- `futr_API_KEY`: API key for futr (**automatically generated if not provided**)
-- `futr_URI`: URI for the futr API
-- `futr_BRANCH`: futr version to use (`stable` or `dev`)
-- `futr_AUTO_UPDATE`: Whether to automatically update futr
-- `futr_RLHF`: Enable reinforcement learning from hfutrn feedback (thumbs up/down buttons in UI)
-- `futr_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
+- `brave_API_KEY`: API key for brave (**automatically generated if not provided**)
+- `brave_URI`: URI for the brave API
+- `brave_BRANCH`: brave version to use (`stable` or `dev`)
+- `brave_AUTO_UPDATE`: Whether to automatically update brave
+- `brave_RLHF`: Enable reinforcement learning from hbraven feedback (thumbs up/down buttons in UI)
+- `brave_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
 - `AUTH_PROVIDER`: Authentication provider (`none` or `magicalauth`)
 - `INTERACTIVE_MODE`: Should always be set to `chat` (`form` mode is experimental)
 - `THEME_NAME`: UI color scheme (`default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)

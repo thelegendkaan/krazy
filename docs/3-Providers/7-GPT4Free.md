@@ -1,7 +1,7 @@
 # GPT4Free
 
 - [GPT4Free](https://github.com/xtekky/gpt4free)
-- [futr](https://github.com/pmcvay1003/futr)
+- [brave](https://github.com/delmenhorst09/brave)
 
 ## Disclaimer
 

@@ -1,16 +1,16 @@
 services:
-  futr:
+  brave:
     init: true
     environment:
       DATABASE_TYPE: ${DATABASE_TYPE:-sqlite}
-      DATABASE_NAME: ${DATABASE_NAME:-models/futr}
+      DATABASE_NAME: ${DATABASE_NAME:-models/brave}
       UVICORN_WORKERS: ${UVICORN_WORKERS:-10}
-      futr_API_KEY: ${futr_API_KEY:-None}
-      futr_URI: ${futr_URI:-http://futr:7437}
+      brave_API_KEY: ${brave_API_KEY:-None}
+      brave_URI: ${brave_URI:-http://brave:7437}
       MAGIC_LINK_URL: ${AUTH_WEB:-http://localhost:3437}
       DISABLED_EXTENSIONS: ${DISABLED_EXTENSIONS}
       DISABLED_PROVIDERS: ${DISABLED_PROVIDERS}
-      WORKING_DIRECTORY: ${WORKING_DIRECTORY:-/futr/WORKSPACE}
+      WORKING_DIRECTORY: ${WORKING_DIRECTORY:-/brave/WORKSPACE}
       REGISTRATION_DISABLED: ${REGISTRATION_DISABLED:-false}
       TOKENIZERS_PARALLELISM: "false"
       LOG_LEVEL: ${LOG_LEVEL:-INFO}
@@ -27,11 +27,11 @@ services:
       TESLA_CLIENT_ID: ${TESLA_CLIENT_ID}
       TESLA_CLIENT_SECRET: ${TESLA_CLIENT_SECRET}
       STORAGE_BACKEND: ${STORAGE_BACKEND:-local}
-      STORAGE_CONTAINER: ${STORAGE_CONTAINER:-futr-workspace}
+      STORAGE_CONTAINER: ${STORAGE_CONTAINER:-brave-workspace}
       B2_KEY_ID: ${B2_KEY_ID:-}
       B2_APPLICATION_KEY: ${B2_APPLICATION_KEY:-}
       B2_REGION: ${B2_REGION:-us-west-002}
-      S3_BUCKET: ${S3_BUCKET:-futr-workspace}
+      S3_BUCKET: ${S3_BUCKET:-brave-workspace}
       S3_ENDPOINT: ${S3_ENDPOINT:-http://minio:9000}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-minioadmin}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-minioadmin}
@@ -39,7 +39,7 @@ services:
       AZURE_STORAGE_ACCOUNT_NAME: ${AZURE_STORAGE_ACCOUNT_NAME:-}
       AZURE_STORAGE_KEY: ${AZURE_STORAGE_KEY:-}
       SEED_DATA: ${SEED_DATA:-true}
-      AGENT_NAME: ${futr_AGENT:-XT}
+      AGENT_NAME: ${brave_AGENT:-XT}
       AGENT_PERSONA: ${AGENT_PERSONA}
       TRAINING_URLS: ${TRAINING_URLS}
       ENABLED_COMMANDS: ${ENABLED_COMMANDS}
@@ -69,30 +69,30 @@ services:
       GRAPHIQL: ${GRAPHIQL:-true}
       TZ: ${TZ:-America/New_York}
     ports:
-      - "${futr_PORT:-7437}:7437"
+      - "${brave_PORT:-7437}:7437"
     volumes:
-      - ./models:/futr/models
-      - ./WORKSPACE:/futr/WORKSPACE
+      - ./models:/brave/models
+      - ./WORKSPACE:/brave/WORKSPACE
       - /var/run/docker.sock:/var/run/docker.sock
-  futrinteractive:
+  braveinteractive:
     init: true
     environment:
       MODE: production
       NEXT_TELEMETRY_DISABLED: 1
-      futr_AGENT: ${futr_AGENT:-XT}
-      futr_FOOTER_MESSAGE: ${futr_FOOTER_MESSAGE:-futr 2024}
-      futr_SERVER: ${futr_SERVER:-http://localhost:7437}
-      APP_DESCRIPTION: ${APP_DESCRIPTION-futr is an advanced artificial intelligence agent orchestration agent.}
-      APP_NAME: ${APP_NAME:-futr}
+      brave_AGENT: ${brave_AGENT:-XT}
+      brave_FOOTER_MESSAGE: ${brave_FOOTER_MESSAGE:-brave 2024}
+      brave_SERVER: ${brave_SERVER:-http://localhost:7437}
+      APP_DESCRIPTION: ${APP_DESCRIPTION-brave is an advanced artificial intelligence agent orchestration agent.}
+      APP_NAME: ${APP_NAME:-brave}
       APP_URI: ${APP_URI:-http://localhost:3437}
       LOG_VERBOSITY_SERVER: ${LOG_VERBOSITY_SERVER:-3}
-      futr_FILE_UPLOAD_ENABLED: ${futr_FILE_UPLOAD_ENABLED:-true}
-      futr_VOICE_INPUT_ENABLED: ${futr_VOICE_INPUT_ENABLED:-true}
-      futr_RLHF: ${futr_RLHF:-true}
-      futr_ALLOW_MESSAGE_EDITING: ${futr_ALLOW_MESSAGE_EDITING:-true}
-      futr_ALLOW_MESSAGE_DELETION: ${futr_ALLOW_MESSAGE_DELETION:-true}
-      futr_SHOW_OVERRIDE_SWITCHES: ${futr_SHOW_OVERRIDE_SWITCHES:-tts,websearch,analyze-user-input}
-      futr_CONVERSATION_MODE: ${futr_CONVERSATION_MODE:-select}
+      brave_FILE_UPLOAD_ENABLED: ${brave_FILE_UPLOAD_ENABLED:-true}
+      brave_VOICE_INPUT_ENABLED: ${brave_VOICE_INPUT_ENABLED:-true}
+      brave_RLHF: ${brave_RLHF:-true}
+      brave_ALLOW_MESSAGE_EDITING: ${brave_ALLOW_MESSAGE_EDITING:-true}
+      brave_ALLOW_MESSAGE_DELETION: ${brave_ALLOW_MESSAGE_DELETION:-true}
+      brave_SHOW_OVERRIDE_SWITCHES: ${brave_SHOW_OVERRIDE_SWITCHES:-tts,websearch,analyze-user-input}
+      brave_CONVERSATION_MODE: ${brave_CONVERSATION_MODE:-select}
       INTERACTIVE_MODE: ${INTERACTIVE_MODE:-chat}
       ALLOW_EMAIL_SIGN_IN: ${ALLOW_EMAIL_SIGN_IN:-true}
       GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
@@ -101,7 +101,7 @@ services:
       TESLA_CLIENT_ID: ${TESLA_CLIENT_ID}
       TZ: ${TZ:-America/New_York}
     ports:
-      - "${futr_INTERACTIVE_PORT:-3437}:3437"
+      - "${brave_INTERACTIVE_PORT:-3437}:3437"
     restart: unless-stopped
     volumes:
       - ./node_modules:/app/node_modules

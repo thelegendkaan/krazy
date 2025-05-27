@@ -1,7 +1,7 @@
 # Anthropic Claude
 
 - [Anthropic Claude](https://console.anthropic.com/docs/access)
-- [futr](https://github.com/pmcvay1003/futr)
+- [brave](https://github.com/delmenhorst09/brave)
 
 ## Quick Start Guide
 

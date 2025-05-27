@@ -1,7 +1,7 @@
 # Hugging Face
 
 - [Hugging Face](https://huggingface.co/docs/transformers/index)
-- [futr](https://github.com/pmcvay1003/futr)
+- [brave](https://github.com/delmenhorst09/brave)
 
 ## Quick Start Guide
 
