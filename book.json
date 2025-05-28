@@ -8,7 +8,7 @@
     "summary": "SUMMARY.md"  
   },
   "plugins": [
-    "page-toc-button",
+    "page-toc-button", 
     "github-issue-feedback",
     "summary"
   ],
