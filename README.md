@@ -1,6 +1,6 @@
 <h1>rudy AI</h1> 
 
-Follow us on [Twitter](https://x.com/rudyAI)!
+Follow us on [Twitter](https://x.com/rudyAIOfficial)!
 
 ✨ If you would like to help spread the word about rudy, please consider starring the repo!
 
