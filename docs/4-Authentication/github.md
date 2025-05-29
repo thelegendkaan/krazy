@@ -14,7 +14,7 @@ To use the `GitHubSSO` class, you need to have the following environment variabl
 Ensure your GitHub OAuth application requests the following scopes to access the necessary user information:
 
 - `user:email`
-- `read:user`
+- `read:user` 
 
 ## How to Acquire GitHub OAuth Client ID and Client Secret
 
