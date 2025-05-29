@@ -410,3 +410,4 @@ if __name__ == "__main__":
     # Apply updates and restart server
     print("Please wait while goai is starting, this can take several minutes...")
     set_environment(env_updates=env_updates)
+
