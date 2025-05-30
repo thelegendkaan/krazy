@@ -210,8 +210,8 @@ class EzlocalaiProvider:
         url = response.data[0].url
         with open(image_path, "wb") as f:
             f.write(requests.get(url).content)
-        higher_uri = getenv("higher_URI")
-        return f"{higher_uri}/outputs/{filename}"
+        evie_uri = getenv("evie_URI")
+        return f"{evie_uri}/outputs/{filename}"
 
     def embeddings(self, input) -> np.ndarray:
         openai.base_url = self.API_URI

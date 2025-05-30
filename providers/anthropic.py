@@ -116,7 +116,7 @@ class AnthropicProvider:
                 return f"Claude Error: {e}"
             else:
                 # https://console.anthropic.com/settings/limits
-                # Rate limits that impact higher most with Anthropic API are the input tokens per minute being limited to 80k.
+                # Rate limits that impact evie most with Anthropic API are the input tokens per minute being limited to 80k.
                 # If we hit an error, it is almost always because we exceeded this by sending 2 or more prompts in a row exceeding 80k.
                 # To get around it, we sleep for 61 seconds.
                 time.sleep(61)

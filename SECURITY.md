@@ -6,7 +6,7 @@ Due to the nature of the fast development that is happening in this project, onl
 
 ## Reporting a Vulnerability
 
-If you find a vulnerability, please contact us at contact@higher.com rather than creating a GitHub issue to allow us some time to fix it before it is a known vulnerability to others. 
+If you find a vulnerability, please contact us at contact@evie.com rather than creating a GitHub issue to allow us some time to fix it before it is a known vulnerability to others. 
 
 
  

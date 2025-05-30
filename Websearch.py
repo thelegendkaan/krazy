@@ -16,7 +16,7 @@ from Memories import Memories
 from datetime import datetime
 from googleapiclient.discovery import build
 from MagicalAuth import MagicalAuth
-from highersdk import higherSDK
+from eviesdk import evieSDK
 
 logging.basicConfig(
     level=getenv("LOG_LEVEL"),
@@ -28,11 +28,11 @@ async def search_the_web(
     query: str,
     token: str,
     agent_name: str,
-    conversation_name="higher Terminal",
+    conversation_name="evie Terminal",
 ):
     auth = MagicalAuth(token=token)
     user = auth.email
-    ApiClient = higherSDK(base_uri=getenv("higher_API"), api_key=token)
+    ApiClient = evieSDK(base_uri=getenv("evie_API"), api_key=token)
     c = Conversations(conversation_name=conversation_name, user=user)
     conversaton_id = c.get_conversation_id()
     websearch = Websearch(
@@ -62,7 +62,7 @@ class Websearch:
         self.agent_name = self.agent.agent_name
         self.agent_config = self.agent.AGENT_CONFIG
         self.agent_settings = self.agent_config["settings"]
-        self.requirements = ["highersdk"]
+        self.requirements = ["eviesdk"]
         self.failures = []
         self.collection_number = collection_number
         browsed_links = self.agent.get_browsed_links()
@@ -81,7 +81,7 @@ class Websearch:
         self.websearch_endpoint = (
             self.agent_settings["websearch_endpoint"]
             if "websearch_endpoint" in self.agent_settings
-            else "https://search.higher.com"
+            else "https://search.evie.com"
         )
         try:
             self.websearch_depth = (
@@ -130,7 +130,7 @@ class Websearch:
                     "url": url,
                     "browse_links": False,
                     "disable_memory": True,
-                    "conversation_name": "higher Terminal",
+                    "conversation_name": "evie Terminal",
                     "tts": "false",
                     "searching": True,
                     "log_user_input": False,
@@ -151,7 +151,7 @@ class Websearch:
                         "url": url,
                         "browse_links": False,
                         "disable_memory": True,
-                        "conversation_name": "higher Terminal",
+                        "conversation_name": "evie Terminal",
                         "tts": "false",
                         "searching": True,
                         "log_user_input": False,
@@ -494,7 +494,7 @@ class Websearch:
             with open(instances_file, "w") as f:
                 json.dump(data, f)
         servers = list(data["instances"].keys())
-        servers.append("https://search.higher.com")
+        servers.append("https://search.evie.com")
         servers.append("https://lite.duckduckgo.com/lite")
         websearch_endpoint = self.websearch_endpoint
         if "websearch_endpoint" not in self.agent_settings:
