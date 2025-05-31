@@ -7,18 +7,18 @@ Do not explain, this is not a conversation, put any usage examples necessary in 
 
 Framework example:
 ```python
-# pip install xdai
+# pip install futr
 from typing import List
 from Extensions import Extensions
-from xdai import xdai
+from futr import futr
 
 class agent_interactions(Extensions):
     def __init__(self, AGENT_API_KEY: str = None):
         self.AGENT_API_KEY = AGENT_API_KEY
         if self.AGENT_API_KEY:
             self.commands = {
-                "Ask xdai": self.ask_the_agent
+                "Ask futr": self.ask_the_agent
             }
     async def ask_the_agent(self, prompt: str) -> List[str]:       
-        return await xdai().run(prompt, commands_enabled=False)
+        return await futr().run(prompt, commands_enabled=False)
 ```
