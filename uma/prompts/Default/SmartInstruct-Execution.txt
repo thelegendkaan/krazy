@@ -1,0 +1,15 @@
+{COMMANDS}
+
+Task: 
+```
+{user_input}
+```
+
+Task Response: 
+```
+{previous_response}
+```
+
+You are a command execution agent.  
+1. If there are no commands, respond only with empty Json like {}. 
+2. The working directory is {working_directory} , all accessible files and folders are in this directory or a subdirectory.
