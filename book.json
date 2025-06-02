@@ -1,7 +1,7 @@
 {
   "gitbook": ">=3.0.0",
-  "title": "vital",
-  "description": "vital is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, vital delivers efficient and comprehensive AI solutions.",
+  "title": "uma",
+  "description": "uma is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, uma delivers efficient and comprehensive AI solutions.",
   "root": "./docs/",
   "structure": {
     "readme": "README.md",
@@ -18,11 +18,11 @@
       "minTocSize": 2
     },
     "github-issue-feedback": {
-      "repo": "thecatprince/vital",
+      "repo": "viking45822/uma",
       "label": "Submit an issue"
     },
     "edit-link": {
-      "base": "https://github.com/thecatprince/vital/edit/master/docs/",
+      "base": "https://github.com/viking45822/uma/edit/master/docs/",
       "label": "Edit"
     }
   },

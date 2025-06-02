@@ -1,7 +1,7 @@
 # Anthropic Claude
 
 - [Anthropic Claude](https://console.anthropic.com/docs/access)
-- [vital](https://github.com/thecatprince/vital)
+- [uma](https://github.com/viking45822/uma)
 
 ## Quick Start Guide
 

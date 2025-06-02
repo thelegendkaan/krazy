@@ -1,7 +1,7 @@
 # Google Gemini
 
 - [Google Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini)
-- [vital](https://github.com/thecatprince/vital)
+- [uma](https://github.com/viking45822/uma)
 
 ## Quick Start Guide
 

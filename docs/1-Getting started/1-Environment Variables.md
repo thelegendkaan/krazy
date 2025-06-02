@@ -1,13 +1,13 @@
 # Environment Variables
 
-The script sets up various environment variables for vital. Some key variables and their purposes include:
+The script sets up various environment variables for uma. Some key variables and their purposes include:
 
-- `vital_API_KEY`: API key for vital (**automatically generated if not provided**)
-- `vital_URI`: URI for the vital API
-- `vital_BRANCH`: vital version to use (`stable` or `dev`)
-- `vital_AUTO_UPDATE`: Whether to automatically update vital
-- `vital_RLHF`: Enable reinforcement learning from human feedback (thumbs up/down buttons in UI)
-- `vital_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
+- `uma_API_KEY`: API key for uma (**automatically generated if not provided**)
+- `uma_URI`: URI for the uma API
+- `uma_BRANCH`: uma version to use (`stable` or `dev`)
+- `uma_AUTO_UPDATE`: Whether to automatically update uma
+- `uma_RLHF`: Enable reinforcement learning from human feedback (thumbs up/down buttons in UI)
+- `uma_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
 - `AUTH_PROVIDER`: Authentication provider (`none` or `magicalauth`)
 - `INTERACTIVE_MODE`: Should always be set to `chat` (`form` mode is experimental)
 - `THEME_NAME`: UI color scheme (`default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)

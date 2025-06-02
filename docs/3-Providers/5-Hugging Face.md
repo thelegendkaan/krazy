@@ -1,7 +1,7 @@
 # Hugging Face
 
 - [Hugging Face](https://huggingface.co/docs/transformers/index)
-- [vital](https://github.com/thecatprince/vital)
+- [uma](https://github.com/viking45822/uma)
 
 ## Quick Start Guide
 

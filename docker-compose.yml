@@ -1,17 +1,17 @@
 services:
-  vital:
-    image: joshxt/vital:latest
+  uma:
+    image: joshxt/uma:latest
     init: true
     environment:
       DATABASE_TYPE: ${DATABASE_TYPE:-sqlite}
-      DATABASE_NAME: ${DATABASE_NAME:-models/vital}
+      DATABASE_NAME: ${DATABASE_NAME:-models/uma}
       UVICORN_WORKERS: ${UVICORN_WORKERS:-10}
-      vital_API_KEY: ${vital_API_KEY:-None}
-      vital_URI: ${vital_URI:-http://vital:7437}
+      uma_API_KEY: ${uma_API_KEY:-None}
+      uma_URI: ${uma_URI:-http://uma:7437}
       MAGIC_LINK_URL: ${AUTH_WEB:-http://localhost:3437}
       DISABLED_EXTENSIONS: ${DISABLED_EXTENSIONS}
       DISABLED_PROVIDERS: ${DISABLED_PROVIDERS}
-      WORKING_DIRECTORY: ${WORKING_DIRECTORY:-/vital/WORKSPACE}
+      WORKING_DIRECTORY: ${WORKING_DIRECTORY:-/uma/WORKSPACE}
       REGISTRATION_DISABLED: ${REGISTRATION_DISABLED:-false}
       TOKENIZERS_PARALLELISM: "false"
       LOG_LEVEL: ${LOG_LEVEL:-INFO}
@@ -28,11 +28,11 @@ services:
       TESLA_CLIENT_ID: ${TESLA_CLIENT_ID}
       TESLA_CLIENT_SECRET: ${TESLA_CLIENT_SECRET}
       STORAGE_BACKEND: ${STORAGE_BACKEND:-local}
-      STORAGE_CONTAINER: ${STORAGE_CONTAINER:-vital-workspace}
+      STORAGE_CONTAINER: ${STORAGE_CONTAINER:-uma-workspace}
       B2_KEY_ID: ${B2_KEY_ID:-}
       B2_APPLICATION_KEY: ${B2_APPLICATION_KEY:-}
       B2_REGION: ${B2_REGION:-us-west-002}
-      S3_BUCKET: ${S3_BUCKET:-vital-workspace}
+      S3_BUCKET: ${S3_BUCKET:-uma-workspace}
       S3_ENDPOINT: ${S3_ENDPOINT:-http://minio:9000}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-minioadmin}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-minioadmin}
@@ -40,7 +40,7 @@ services:
       AZURE_STORAGE_ACCOUNT_NAME: ${AZURE_STORAGE_ACCOUNT_NAME:-}
       AZURE_STORAGE_KEY: ${AZURE_STORAGE_KEY:-}
       SEED_DATA: ${SEED_DATA:-true}
-      AGENT_NAME: ${vital_AGENT:-XT}
+      AGENT_NAME: ${uma_AGENT:-XT}
       AGENT_PERSONA: ${AGENT_PERSONA}
       TRAINING_URLS: ${TRAINING_URLS}
       ENABLED_COMMANDS: ${ENABLED_COMMANDS}
@@ -70,31 +70,31 @@ services:
       GRAPHIQL: ${GRAPHIQL:-true}
       TZ: ${TZ:-America/New_York}
     ports:
-      - "${vital_PORT:-7437}:7437"
+      - "${uma_PORT:-7437}:7437"
     volumes:
-      - ./models:/vital/models
-      - ./WORKSPACE:/vital/WORKSPACE
+      - ./models:/uma/models
+      - ./WORKSPACE:/uma/WORKSPACE
       - /var/run/docker.sock:/var/run/docker.sock
-  vitalinteractive:
-    image: joshxt/vital-interactive:main
+  umainteractive:
+    image: joshxt/uma-interactive:main
     init: true
     environment:
       MODE: production
       NEXT_TELEMETRY_DISABLED: 1
-      vital_AGENT: ${vital_AGENT:-XT}
-      vital_FOOTER_MESSAGE: ${vital_FOOTER_MESSAGE:-vital 2024}
-      vital_SERVER: ${vital_SERVER:-http://localhost:7437}
-      APP_DESCRIPTION: ${APP_DESCRIPTION-vital is an advanced artificial intelligence agent orchestration agent.}
-      APP_NAME: ${APP_NAME:-vital}
+      uma_AGENT: ${uma_AGENT:-XT}
+      uma_FOOTER_MESSAGE: ${uma_FOOTER_MESSAGE:-uma 2024}
+      uma_SERVER: ${uma_SERVER:-http://localhost:7437}
+      APP_DESCRIPTION: ${APP_DESCRIPTION-uma is an advanced artificial intelligence agent orchestration agent.}
+      APP_NAME: ${APP_NAME:-uma}
       APP_URI: ${APP_URI:-http://localhost:3437}
       LOG_VERBOSITY_SERVER: ${LOG_VERBOSITY_SERVER:-3}
-      vital_FILE_UPLOAD_ENABLED: ${vital_FILE_UPLOAD_ENABLED:-true}
-      vital_VOICE_INPUT_ENABLED: ${vital_VOICE_INPUT_ENABLED:-true}
-      vital_RLHF: ${vital_RLHF:-true}
-      vital_ALLOW_MESSAGE_EDITING: ${vital_ALLOW_MESSAGE_EDITING:-true}
-      vital_ALLOW_MESSAGE_DELETION: ${vital_ALLOW_MESSAGE_DELETION:-true}
-      vital_SHOW_OVERRIDE_SWITCHES: ${vital_SHOW_OVERRIDE_SWITCHES:-tts,websearch,analyze-user-input}
-      vital_CONVERSATION_MODE: ${vital_CONVERSATION_MODE:-select}
+      uma_FILE_UPLOAD_ENABLED: ${uma_FILE_UPLOAD_ENABLED:-true}
+      uma_VOICE_INPUT_ENABLED: ${uma_VOICE_INPUT_ENABLED:-true}
+      uma_RLHF: ${uma_RLHF:-true}
+      uma_ALLOW_MESSAGE_EDITING: ${uma_ALLOW_MESSAGE_EDITING:-true}
+      uma_ALLOW_MESSAGE_DELETION: ${uma_ALLOW_MESSAGE_DELETION:-true}
+      uma_SHOW_OVERRIDE_SWITCHES: ${uma_SHOW_OVERRIDE_SWITCHES:-tts,websearch,analyze-user-input}
+      uma_CONVERSATION_MODE: ${uma_CONVERSATION_MODE:-select}
       INTERACTIVE_MODE: ${INTERACTIVE_MODE:-chat}
       ALLOW_EMAIL_SIGN_IN: ${ALLOW_EMAIL_SIGN_IN:-true}
       GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
@@ -103,7 +103,7 @@ services:
       TESLA_CLIENT_ID: ${TESLA_CLIENT_ID}
       TZ: ${TZ:-America/New_York}
     ports:
-      - "${vital_INTERACTIVE_PORT:-3437}:3437"
+      - "${uma_INTERACTIVE_PORT:-3437}:3437"
     restart: unless-stopped
     volumes:
       - ./node_modules:/app/node_modules

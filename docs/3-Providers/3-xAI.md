@@ -1,7 +1,7 @@
 # xAI
 
 - [xAI](https://docs.x.ai/docs)
-- [vital](https://github.com/thecatprince/vital)
+- [uma](https://github.com/viking45822/uma)
 
 ⚠️ **Please note that using some AI providers, such as xAI's API, can be expensive. Monitor your usage carefully to avoid incurring unexpected costs. We're NOT responsible for your usage under any circumstance.**
 

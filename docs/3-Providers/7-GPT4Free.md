@@ -1,7 +1,7 @@
 # GPT4Free
 
 - [GPT4Free](https://github.com/xtekky/gpt4free)
-- [vital](https://github.com/thecatprince/vital)
+- [uma](https://github.com/viking45822/uma)
 
 ## Disclaimer
 
