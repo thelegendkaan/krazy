@@ -1,7 +1,7 @@
 import logging
 import random
 import re
-import numpy as np
+import numpy as np 
 import requests
 from Globals import getenv
 import uuid
