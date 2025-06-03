@@ -1,6 +1,5 @@
 services:
   xdai:
-    image: joshxt/xdai:latest
     init: true
     environment:
       DATABASE_TYPE: ${DATABASE_TYPE:-sqlite}
@@ -76,7 +75,6 @@ services:
       - ./WORKSPACE:/xdai/WORKSPACE
       - /var/run/docker.sock:/var/run/docker.sock
   xdaiinteractive:
-    image: joshxt/xdai-interactive:main
     init: true
     environment:
       MODE: production
