@@ -8,7 +8,7 @@ import asyncio
 import urllib.parse
 from urllib.parse import urlparse
 from playwright.async_api import async_playwright
-from bs4 import BeautifulSoup  # type: ignore
+from bs4 import BeautifulSoup  # type: ignore 
 from typing import List
 from ApiClient import Agent, Conversations
 from Globals import getenv, get_tokens
