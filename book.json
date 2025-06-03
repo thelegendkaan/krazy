@@ -1,7 +1,7 @@
 {
   "gitbook": ">=3.0.0",
-  "title": "krazy",
-  "description": "krazy is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, krazy delivers efficient and comprehensive AI solutions.",
+  "title": "zenni",
+  "description": "zenni is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, zenni delivers efficient and comprehensive AI solutions.",
   "root": "./docs/",
   "structure": {
     "readme": "README.md",
@@ -18,11 +18,11 @@
       "minTocSize": 2
     },
     "github-issue-feedback": {
-      "repo": "thelegendkaan/krazy",
+      "repo": "stevz58/zenni",
       "label": "Submit an issue"
     },
     "edit-link": {
-      "base": "https://github.com/thelegendkaan/krazy/edit/master/docs/",
+      "base": "https://github.com/stevz58/zenni/edit/master/docs/",
       "label": "Edit"
     }
   },
