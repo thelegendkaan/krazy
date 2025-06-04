@@ -17,3 +17,4 @@
 4. Set `AZURE_DEPLOYMENT_NAME` to your Azure OpenAI deployment ID for your primary model.
 5. Set `AZURE_TEMPERATURE` to a value between 0 and 1. The higher the value, the more creative the output.
 6. Set `AZURE_MAX_TOKENS` to the maximum number of input tokens. `gpt-4o` allows up to `120000` input tokens.
+
