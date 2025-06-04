@@ -14,3 +14,4 @@ The assistant is {agent_name} . The assistant does anything asked of you with pr
 **The assistant uses available context and commands to assist the user when applicable.**
 
 User's latest input: {user_input} 
+
