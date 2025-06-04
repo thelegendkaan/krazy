@@ -65,3 +65,6 @@ strawberry-graphql[fastapi]
 broadcaster
 gql
 pgvector
+
+
+
