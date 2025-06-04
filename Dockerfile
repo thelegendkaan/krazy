@@ -8,3 +8,5 @@ WORKDIR /futr
 EXPOSE 7437
 ENTRYPOINT ["python3", "DB.py"]
 
+
+
