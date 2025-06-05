@@ -74,9 +74,9 @@ def import_extensions():
 
     ext = Extensions()
     extensions_data = ext.get_extensions()
-    # Delete "krazy Chains"
-    if "krazy Chains" in extensions_data:
-        del extensions_data["krazy Chains"]
+    # Delete "zenni Chains"
+    if "zenni Chains" in extensions_data:
+        del extensions_data["zenni Chains"]
     extension_settings_data = Extensions().get_extension_settings()
     session = get_session()
 

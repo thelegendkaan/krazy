@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 def impersonate_user(user_id: str):
-    krazy_API_KEY = getenv("krazy_API_KEY")
+    zenni_API_KEY = getenv("zenni_API_KEY")
     # Get users email
     session = get_session()
     user = session.query(User).filter(User.id == user_id).first()
@@ -33,7 +33,7 @@ def impersonate_user(user_id: str):
             "email": email,
             "exp": datetime.now() + timedelta(days=1),
         },
-        krazy_API_KEY,
+        zenni_API_KEY,
         algorithm="HS256",
     )
     return token

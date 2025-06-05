@@ -35,7 +35,7 @@ import os
 import re
 
 
-class krazy:
+class zenni:
     def __init__(
         self,
         user: str,
@@ -59,7 +59,7 @@ class krazy:
             self.conversation_id = self.conversation.get_conversation_id()
             self.conversation_name = conversation_name
         self.agent_name = agent_name
-        self.uri = getenv("krazy_URI")
+        self.uri = getenv("zenni_URI")
         if collection_id is not None:
             self.collection_id = str(collection_id)
         elif conversation_name:
@@ -199,7 +199,7 @@ class krazy:
         **kwargs,
     ):
         """
-        Run inference on the krazy agent
+        Run inference on the zenni agent
 
         Args:
             user_input (str): User input to the agent
@@ -1800,7 +1800,7 @@ class krazy:
                     # Before logging the response, lets get all activities matching the `thinking_id` mermaid diagram
                     activities = c.get_subactivities(thinking_id)
                     if activities:
-                        activity_prompt = f"{new_prompt}\n\n{activities}\n\nRkrazyw the detailed activities list and create a mermaid diagram that describes the paths taken during the detailed activities that were performed based on the user input. This mermaid diagram should start with ```mermaid\nContent of the diagram\n```\ninside of the <answer> block as the final response. The activities describe the thoughts in steps that ultimately led to the response from the assistant to the user based on the user input. Be as detailed as possible with the diagram. Ensure each item in the diagram is in quotes."
+                        activity_prompt = f"{new_prompt}\n\n{activities}\n\nRzenniw the detailed activities list and create a mermaid diagram that describes the paths taken during the detailed activities that were performed based on the user input. This mermaid diagram should start with ```mermaid\nContent of the diagram\n```\ninside of the <answer> block as the final response. The activities describe the thoughts in steps that ultimately led to the response from the assistant to the user based on the user input. Be as detailed as possible with the diagram. Ensure each item in the diagram is in quotes."
                         mermaid_diagram = await self.inference(
                             user_input=activity_prompt,
                             prompt_category="Default",
@@ -2148,14 +2148,14 @@ class krazy:
         **kwargs,
     ):
         """
-        Converts a string to a Pydantic model using an krazy agent.
+        Converts a string to a Pydantic model using an zenni agent.
 
         Args:
         input_string (str): The string to convert to a model.
         model (Type[BaseModel]): The Pydantic model to convert the string to.
         max_failures (int): The maximum number of times to retry the conversion if it fails.
         response_type (str): The type of response to return. Either 'json' or None. None will return the model.
-        **kwargs: Additional arguments to pass to the krazy agent as prompt arguments.
+        **kwargs: Additional arguments to pass to the zenni agent as prompt arguments.
         """
         input_string = str(input_string)
         schema = self._generate_detailed_schema(model)
@@ -2367,7 +2367,7 @@ class krazy:
         code: str,
         code_error: str,
         file_content: str,
-        file_prkrazyw: str = "",
+        file_przenniw: str = "",
         import_file: str = "",
         multifile: bool = False,
         failures: int = 0,
@@ -2378,7 +2378,7 @@ class krazy:
             user_input=user_input,
             prompt_category="Default",
             prompt_name="Fix Code",
-            file_prkrazyw=file_prkrazyw,
+            file_przenniw=file_przenniw,
             import_file=import_file,
             code=code,
             code_error=str(code_error),
@@ -2402,7 +2402,7 @@ class krazy:
                 else "Verify Code Interpreter"
             ),
             import_file=import_file,
-            file_prkrazyw=file_prkrazyw,
+            file_przenniw=file_przenniw,
             code=fixed_code,
             log_user_input=False,
             log_output=False,
@@ -2429,7 +2429,7 @@ class krazy:
                 code=code_verification,
                 code_error=str(code_execution),
                 file_content=file_content,
-                file_prkrazyw=file_prkrazyw,
+                file_przenniw=file_przenniw,
                 import_file=import_file,
                 failures=failures,
                 max_failures=max_failures,
@@ -2501,7 +2501,7 @@ class krazy:
                 return await self.analyze_user_input(user_input=user_input)
         if len(file_names) > 1:
             # Found multiple files, do things a little differently.
-            prkrazyws = []
+            przenniws = []
             import_files = ""
             for file in file_names:
                 if import_files == "":
@@ -2512,9 +2512,9 @@ class krazy:
                 file_content = open(file_path, "r").read()
                 lines = file_content.split("\n")
                 lines = lines[:2]
-                file_prkrazyw = "\n".join(lines)
-                prkrazyws.append(f"`{file_path}`\n```csv\n{file_prkrazyw}\n```")
-            file_prkrazyw = "\n".join(prkrazyws)
+                file_przenniw = "\n".join(lines)
+                przenniws.append(f"`{file_path}`\n```csv\n{file_przenniw}\n```")
+            file_przenniw = "\n".join(przenniws)
             self.conversation.log_interaction(
                 role=self.agent_name,
                 message=f"[SUBACTIVITY][{thinking_id}] Analyzing data from multiple files: {import_files}.",
@@ -2525,7 +2525,7 @@ class krazy:
                 lines = lines[:5]
             else:
                 lines = lines[:2]
-            file_prkrazyw = "\n".join(lines)
+            file_przenniw = "\n".join(lines)
             self.conversation.log_interaction(
                 role=self.agent_name,
                 message=f"[SUBACTIVITY][{thinking_id}] Analyzing data from file `{file_name}`.",
@@ -2539,7 +2539,7 @@ class krazy:
                 else "Code Interpreter"
             ),
             import_file=import_files if len(file_names) > 1 else file_path,
-            file_prkrazyw=file_prkrazyw,
+            file_przenniw=file_przenniw,
             log_user_input=False,
             log_output=False,
             browse_links=False,
@@ -2562,7 +2562,7 @@ class krazy:
                 else "Verify Code Interpreter"
             ),
             import_file=import_file,
-            file_prkrazyw=file_prkrazyw,
+            file_przenniw=file_przenniw,
             code=code_interpreter,
             log_user_input=False,
             log_output=False,
@@ -2594,7 +2594,7 @@ class krazy:
                 code=code_verification,
                 code_error=str(code_execution),
                 file_content=file_content,
-                file_prkrazyw=file_prkrazyw,
+                file_przenniw=file_przenniw,
                 import_file=import_file,
                 max_failures=max_failures,
             )
