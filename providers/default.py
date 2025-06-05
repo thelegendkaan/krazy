@@ -10,7 +10,7 @@ import numpy as np
 
 # Default provider uses:
 # llm: gpt4free
-# tts: google
+# tts: google 
 # transcription: faster-whisper
 # translation: faster-whisper
 
