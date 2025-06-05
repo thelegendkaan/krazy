@@ -18,10 +18,10 @@ except ImportError:
     import pyaudio
 
 try:
-    from goaisdk import goaiSDK
+    from vitalsdk import vitalSDK
 except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "goaisdk"])
-    from goaisdk import goaiSDK
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "vitalsdk"])
+    from vitalsdk import vitalSDK
 
 try:
     from faster_whisper import WhisperModel
@@ -44,11 +44,11 @@ except ImportError:
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    filename="goai_listen.log",
+    filename="vital_listen.log",
 )
 
 
-class goaiListen:
+class vitalListen:
     def __init__(
         self,
         server="http://localhost:7437",
@@ -58,7 +58,7 @@ class goaiListen:
         whisper_model="base.en",
         wake_word="hey assistant",
     ):
-        self.sdk = goaiSDK(base_uri=server, api_key=api_key)
+        self.sdk = vitalSDK(base_uri=server, api_key=api_key)
         self.agent_name = agent_name
         self.wake_word = wake_word.lower()
         self.wake_functions = {"chat": self.default_voice_chat}
@@ -348,12 +348,12 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="goai Voice Assistant with Continuous Recording"
+        description="vital Voice Assistant with Continuous Recording"
     )
     parser.add_argument(
-        "--server", default="http://localhost:7437", help="goai server URL"
+        "--server", default="http://localhost:7437", help="vital server URL"
     )
-    parser.add_argument("--api_key", default="", help="goai API key")
+    parser.add_argument("--api_key", default="", help="vital API key")
     parser.add_argument("--agent_name", default="gpt4free", help="Name of the agent")
     parser.add_argument(
         "--conversation_name", default="", help="Name of the conversation"
@@ -368,7 +368,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     try:
-        listener = goaiListen(
+        listener = vitalListen(
             server=args.server,
             api_key=args.api_key,
             agent_name=args.agent_name,
@@ -378,5 +378,5 @@ if __name__ == "__main__":
         )
         listener.listen()
     except Exception as e:
-        logging.error(f"Error initializing or running goaiListen: {str(e)}")
+        logging.error(f"Error initializing or running vitalListen: {str(e)}")
         logging.debug(traceback.format_exc())

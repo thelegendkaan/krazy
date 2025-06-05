@@ -1,7 +1,7 @@
 # GPT4Free
 
 - [GPT4Free](https://github.com/xtekky/gpt4free)
-- [goai](https://github.com/AidanCampbell97/goai)
+- [vital](https://github.com/thecatprince/vital)
 
 ## Disclaimer
 

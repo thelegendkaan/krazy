@@ -1,7 +1,7 @@
 # Anthropic Claude
 
 - [Anthropic Claude](https://console.anthropic.com/docs/access)
-- [goai](https://github.com/AidanCampbell97/goai)
+- [vital](https://github.com/thecatprince/vital)
 
 ## Quick Start Guide
 

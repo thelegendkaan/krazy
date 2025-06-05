@@ -1,7 +1,7 @@
 # Google Gemini
 
 - [Google Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini)
-- [goai](https://github.com/AidanCampbell97/goai)
+- [vital](https://github.com/thecatprince/vital)
 
 ## Quick Start Guide
 

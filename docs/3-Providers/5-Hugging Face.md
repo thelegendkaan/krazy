@@ -1,7 +1,7 @@
 # Hugging Face
 
 - [Hugging Face](https://huggingface.co/docs/transformers/index)
-- [goai](https://github.com/AidanCampbell97/goai)
+- [vital](https://github.com/thecatprince/vital)
 
 ## Quick Start Guide
 

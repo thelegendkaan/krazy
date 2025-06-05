@@ -1,13 +1,13 @@
 # Environment Variables
 
-The script sets up various environment variables for goai. Some key variables and their purposes include:
+The script sets up various environment variables for vital. Some key variables and their purposes include:
 
-- `goai_API_KEY`: API key for goai (**automatically generated if not provided**)
-- `goai_URI`: URI for the goai API
-- `goai_BRANCH`: goai version to use (`stable` or `dev`)
-- `goai_AUTO_UPDATE`: Whether to automatically update goai
-- `goai_RLHF`: Enable reinforcement learning from human feedback (thumbs up/down buttons in UI)
-- `goai_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
+- `vital_API_KEY`: API key for vital (**automatically generated if not provided**)
+- `vital_URI`: URI for the vital API
+- `vital_BRANCH`: vital version to use (`stable` or `dev`)
+- `vital_AUTO_UPDATE`: Whether to automatically update vital
+- `vital_RLHF`: Enable reinforcement learning from human feedback (thumbs up/down buttons in UI)
+- `vital_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
 - `AUTH_PROVIDER`: Authentication provider (`none` or `magicalauth`)
 - `INTERACTIVE_MODE`: Should always be set to `chat` (`form` mode is experimental)
 - `THEME_NAME`: UI color scheme (`default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)

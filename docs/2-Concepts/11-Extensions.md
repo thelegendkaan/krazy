@@ -1,6 +1,6 @@
-# goai Extensions
+# vital Extensions
 
-goai extensions are modular components that provide additional capabilities to AI agents through a "bolt-on" architecture. This approach allows for seamless integration of new functionalities without modifying the core system.
+vital extensions are modular components that provide additional capabilities to AI agents through a "bolt-on" architecture. This approach allows for seamless integration of new functionalities without modifying the core system.
 
 ## Authentication & Context Management
 
@@ -10,13 +10,13 @@ Extensions receive several key pieces of context during initialization:
 
 ```python
 def __init__(self, **kwargs):
-    # goai SDK initialized with user's JWT
-    self.ApiClient = kwargs["ApiClient"] if "ApiClient" in kwargs else goaiSDK(
-        base_uri=getenv("goai_URI"),
+    # vital SDK initialized with user's JWT
+    self.ApiClient = kwargs["ApiClient"] if "ApiClient" in kwargs else vitalSDK(
+        base_uri=getenv("vital_URI"),
         api_key=kwargs["api_key"] if "api_key" in kwargs else "",
     )
     
-    # User's goai JWT for authentication
+    # User's vital JWT for authentication
     self.api_key = kwargs["api_key"] if "api_key" in kwargs else ""
     
     # Agent and conversation context
@@ -31,9 +31,9 @@ def __init__(self, **kwargs):
     self.settings = kwargs  # Contains any additional extension-specific settings
 ```
 
-## goai SDK Integration
+## vital SDK Integration
 
-Extensions can leverage the goai SDK ([PyPI](https://pypi.org/project/goaisdk) | [GitHub](https://github.com/goai/python-sdk)) to interact with core goai functionality. The SDK is automatically injected via `self.ApiClient` and initialized with the user's context.
+Extensions can leverage the vital SDK ([PyPI](https://pypi.org/project/vitalsdk) | [GitHub](https://github.com/vital/python-sdk)) to interact with core vital functionality. The SDK is automatically injected via `self.ApiClient` and initialized with the user's context.
 
 ### Common SDK Operations
 
@@ -170,12 +170,12 @@ self.ApiClient.new_conversation_message(
    - Prevent recursive command execution
    - Maintain clean conversation logs
 
-The SDK provides a comprehensive interface to goai's capabilities, allowing extensions to leverage the full power of the platform while maintaining proper context and security boundaries. Proper use of control flags ensures efficient resource usage and prevents potential issues like recursive command execution or cluttered conversation logs.
+The SDK provides a comprehensive interface to vital's capabilities, allowing extensions to leverage the full power of the platform while maintaining proper context and security boundaries. Proper use of control flags ensures efficient resource usage and prevents potential issues like recursive command execution or cluttered conversation logs.
 
 ### Important Considerations
 
-1. Always use `self.ApiClient` for goai API operations to maintain user context, it is automatically injected into `kwargs`.
-2. Use `self.api_key` (user's JWT) for any operations requiring authentication, this is reserved specifically for goai API calls. If using a different API, prepend the `api_key` variable name with the extension name, such as `OURA_API_KEY`.
+1. Always use `self.ApiClient` for vital API operations to maintain user context, it is automatically injected into `kwargs`.
+2. Use `self.api_key` (user's JWT) for any operations requiring authentication, this is reserved specifically for vital API calls. If using a different API, prepend the `api_key` variable name with the extension name, such as `OURA_API_KEY`.
 3. Respect the working directory boundaries for file operations, the agent should not work outside of `self.WORKING_DIRECTORY` at any time. This will contain file operations to the specific conversation.
 4. Access extension-specific settings through `kwargs`. These settings are automatically injected and can be used to configure extension behavior.
 5. Maintain conversation context for continuity
@@ -225,7 +225,7 @@ Example agent settings flow:
 
 ## Core Extensions Overview
 
-### goai Actions Extension
+### vital Actions Extension
 
 Provides high-level orchestration and coordination capabilities across other extensions.
 
@@ -395,7 +395,7 @@ class your_extension(Extensions):
 
 ### Docstring Design
 
-Docstrings are crucial for goai extensions as they serve as the primary guidance for AI agents to understand when and how to use commands. Well-designed docstrings should include:
+Docstrings are crucial for vital extensions as they serve as the primary guidance for AI agents to understand when and how to use commands. Well-designed docstrings should include:
 
 #### Extension Class Docstring
 

@@ -1,7 +1,7 @@
 # Azure OpenAI
 
 - [Azure OpenAI](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
-- [goai](https://github.com/AidanCampbell97/goai)
+- [vital](https://github.com/thecatprince/vital)
 
 ⚠️ **Please note that using some AI providers, such as OpenAI's API, can be expensive. Monitor your usage carefully to avoid incurring unexpected costs. We're NOT responsible for your usage under any circumstance.**
 

@@ -1,6 +1,6 @@
 # Things to Consider
 
-To attempt to manage expectations, here are some things to consider when using goai with large language models.
+To attempt to manage expectations, here are some things to consider when using vital with large language models.
 
 ## Context and Token Limits
 
@@ -14,4 +14,4 @@ In other words, different tasks require different amounts of context. A full tec
 
 ## Local Model Expectations
 
-While it is absolutely fascinating to run local models, it is important to understand that they are not very good at making decisions currently. This seems to apply to most models that can currently be run locally (as of August 16, 2023.) This is only being mentioned to help manage expectations of what local models can do. They are great for generating text and can absolutely be used for many things within goai, but I would not recommend giving local models command access due to their lower logical reasoning capabilities. You may get poor results attempting autonomous execution with local models.  Local models are best utilized within Chains where you define to run commands based on the text responses that you predefine and the LLM never knows that it can or cannot run commands.  This is the best way to utilize local models in goai currently.
+While it is absolutely fascinating to run local models, it is important to understand that they are not very good at making decisions currently. This seems to apply to most models that can currently be run locally (as of August 16, 2023.) This is only being mentioned to help manage expectations of what local models can do. They are great for generating text and can absolutely be used for many things within vital, but I would not recommend giving local models command access due to their lower logical reasoning capabilities. You may get poor results attempting autonomous execution with local models.  Local models are best utilized within Chains where you define to run commands based on the text responses that you predefine and the LLM never knows that it can or cannot run commands.  This is the best way to utilize local models in vital currently.
