@@ -8,7 +8,7 @@ import uuid
 
 try:
     import openai
-except ImportError:
+except ImportError: 
     import sys
     import subprocess
 
