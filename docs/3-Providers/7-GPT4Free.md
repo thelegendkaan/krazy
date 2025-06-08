@@ -1,7 +1,7 @@
 # GPT4Free
 
 - [GPT4Free](https://github.com/xtekky/gpt4free)
-- [evie](https://github.com/miklicfranc29/evie)
+- [luv](https://github.com/rave0790/luv)
 
 ## Disclaimer
 

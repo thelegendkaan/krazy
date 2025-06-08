@@ -1,7 +1,7 @@
 # Anthropic Claude
 
 - [Anthropic Claude](https://console.anthropic.com/docs/access)
-- [evie](https://github.com/miklicfranc29/evie)
+- [luv](https://github.com/rave0790/luv)
 
 ## Quick Start Guide
 

@@ -1,12 +1,12 @@
 # Providers
 
-Providers are the hosts of models or services that evie uses to interact with users.
+Providers are the hosts of models or services that luv uses to interact with users.
 
 ## Logical Language Model (LLM) Providers
 
-We're fully aware that they're called `large language models` and not `logical language models`, but our approach to prompting and chaining uses your agents primary LLM for logical reasoning in the background. This is why we refer to them as `logical language models` in the context of evie.
+We're fully aware that they're called `large language models` and not `logical language models`, but our approach to prompting and chaining uses your agents primary LLM for logical reasoning in the background. This is why we refer to them as `logical language models` in the context of luv.
 
-The agent's LLM provider will be the logical language model. This is generally an intelligent model that can understand and generate hevien-like text. The LLM provider will be used for generating responses to user input and for understanding the user's intent.
+The agent's LLM provider will be the logical language model. This is generally an intelligent model that can understand and generate hluvn-like text. The LLM provider will be used for generating responses to user input and for understanding the user's intent.
 
 ### Current LLM Providers
 
@@ -45,7 +45,7 @@ Text to speech providers are used to generate speech from the agent's response. 
 
 - OpenAI
 - ezLocalai (Voice cloning TTS)
-- Elevenlabs (Voice cloning TTS over API, listed under `evie` Provider)
+- Elevenlabs (Voice cloning TTS over API, listed under `luv` Provider)
 - default: Google (gTTS)
 
 ## Speech Transcription Providers

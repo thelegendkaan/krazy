@@ -18,10 +18,10 @@ except ImportError:
     import pyaudio
 
 try:
-    from eviesdk import evieSDK
+    from luvsdk import luvSDK
 except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "eviesdk"])
-    from eviesdk import evieSDK
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "luvsdk"])
+    from luvsdk import luvSDK
 
 try:
     from faster_whisper import WhisperModel
@@ -44,11 +44,11 @@ except ImportError:
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    filename="evie_listen.log",
+    filename="luv_listen.log",
 )
 
 
-class evieListen:
+class luvListen:
     def __init__(
         self,
         server="http://localhost:7437",
@@ -58,7 +58,7 @@ class evieListen:
         whisper_model="base.en",
         wake_word="hey assistant",
     ):
-        self.sdk = evieSDK(base_uri=server, api_key=api_key)
+        self.sdk = luvSDK(base_uri=server, api_key=api_key)
         self.agent_name = agent_name
         self.wake_word = wake_word.lower()
         self.wake_functions = {"chat": self.default_voice_chat}
@@ -348,12 +348,12 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="evie Voice Assistant with Continuous Recording"
+        description="luv Voice Assistant with Continuous Recording"
     )
     parser.add_argument(
-        "--server", default="http://localhost:7437", help="evie server URL"
+        "--server", default="http://localhost:7437", help="luv server URL"
     )
-    parser.add_argument("--api_key", default="", help="evie API key")
+    parser.add_argument("--api_key", default="", help="luv API key")
     parser.add_argument("--agent_name", default="gpt4free", help="Name of the agent")
     parser.add_argument(
         "--conversation_name", default="", help="Name of the conversation"
@@ -368,7 +368,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     try:
-        listener = evieListen(
+        listener = luvListen(
             server=args.server,
             api_key=args.api_key,
             agent_name=args.agent_name,
@@ -378,5 +378,5 @@ if __name__ == "__main__":
         )
         listener.listen()
     except Exception as e:
-        logging.error(f"Error initializing or running evieListen: {str(e)}")
+        logging.error(f"Error initializing or running luvListen: {str(e)}")
         logging.debug(traceback.format_exc())

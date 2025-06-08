@@ -1,7 +1,7 @@
 # Azure OpenAI
 
 - [Azure OpenAI](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
-- [evie](https://github.com/miklicfranc29/evie) 
+- [luv](https://github.com/rave0790/luv) 
  
 ⚠️ **Please note that using some AI providers, such as OpenAI's API, can be expensive. Monitor your usage carefully to avoid incurring unexpected costs. We're NOT responsible for your usage under any circumstance.**
 
@@ -15,6 +15,6 @@
 2. Set `AZURE_API_KEY` to your Azure OpenAI API key.
 3. Set `AZURE_OPENAI_ENDPOINT` to your Azure OpenAI endpoint.
 4. Set `AZURE_DEPLOYMENT_NAME` to your Azure OpenAI deployment ID for your primary model.
-5. Set `AZURE_TEMPERATURE` to a value between 0 and 1. The evie the value, the more creative the output.
+5. Set `AZURE_TEMPERATURE` to a value between 0 and 1. The luv the value, the more creative the output.
 6. Set `AZURE_MAX_TOKENS` to the maximum number of input tokens. `gpt-4o` allows up to `120000` input tokens.
 

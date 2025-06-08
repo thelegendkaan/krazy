@@ -1,6 +1,6 @@
-# evie Extensions
+# luv Extensions
 
-evie extensions are modular components that provide additional capabilities to AI agents through a "bolt-on" architecture. This approach allows for seamless integration of new functionalities without modifying the core system.
+luv extensions are modular components that provide additional capabilities to AI agents through a "bolt-on" architecture. This approach allows for seamless integration of new functionalities without modifying the core system.
 
 ## Authentication & Context Management
 
@@ -10,13 +10,13 @@ Extensions receive several key pieces of context during initialization:
 
 ```python
 def __init__(self, **kwargs):
-    # evie SDK initialized with user's JWT
-    self.ApiClient = kwargs["ApiClient"] if "ApiClient" in kwargs else evieSDK(
-        base_uri=getenv("evie_URI"),
+    # luv SDK initialized with user's JWT
+    self.ApiClient = kwargs["ApiClient"] if "ApiClient" in kwargs else luvSDK(
+        base_uri=getenv("luv_URI"),
         api_key=kwargs["api_key"] if "api_key" in kwargs else "",
     )
     
-    # User's evie JWT for authentication
+    # User's luv JWT for authentication
     self.api_key = kwargs["api_key"] if "api_key" in kwargs else ""
     
     # Agent and conversation context
@@ -31,9 +31,9 @@ def __init__(self, **kwargs):
     self.settings = kwargs  # Contains any additional extension-specific settings
 ```
 
-## evie SDK Integration
+## luv SDK Integration
 
-Extensions can leverage the evie SDK ([PyPI](https://pypi.org/project/eviesdk) | [GitHub](https://github.com/evie/python-sdk)) to interact with core evie functionality. The SDK is automatically injected via `self.ApiClient` and initialized with the user's context.
+Extensions can leverage the luv SDK ([PyPI](https://pypi.org/project/luvsdk) | [GitHub](https://github.com/luv/python-sdk)) to interact with core luv functionality. The SDK is automatically injected via `self.ApiClient` and initialized with the user's context.
 
 ### Common SDK Operations
 
@@ -170,12 +170,12 @@ self.ApiClient.new_conversation_message(
    - Prevent recursive command execution
    - Maintain clean conversation logs
 
-The SDK provides a comprehensive interface to evie's capabilities, allowing extensions to leverage the full power of the platform while maintaining proper context and security boundaries. Proper use of control flags ensures efficient resource usage and prevents potential issues like recursive command execution or cluttered conversation logs.
+The SDK provides a comprehensive interface to luv's capabilities, allowing extensions to leverage the full power of the platform while maintaining proper context and security boundaries. Proper use of control flags ensures efficient resource usage and prevents potential issues like recursive command execution or cluttered conversation logs.
 
 ### Important Considerations
 
-1. Always use `self.ApiClient` for evie API operations to maintain user context, it is automatically injected into `kwargs`.
-2. Use `self.api_key` (user's JWT) for any operations requiring authentication, this is reserved specifically for evie API calls. If using a different API, prepend the `api_key` variable name with the extension name, such as `OURA_API_KEY`.
+1. Always use `self.ApiClient` for luv API operations to maintain user context, it is automatically injected into `kwargs`.
+2. Use `self.api_key` (user's JWT) for any operations requiring authentication, this is reserved specifically for luv API calls. If using a different API, prepend the `api_key` variable name with the extension name, such as `OURA_API_KEY`.
 3. Respect the working directory boundaries for file operations, the agent should not work outside of `self.WORKING_DIRECTORY` at any time. This will contain file operations to the specific conversation.
 4. Access extension-specific settings through `kwargs`. These settings are automatically injected and can be used to configure extension behavior.
 5. Maintain conversation context for continuity
@@ -225,7 +225,7 @@ Example agent settings flow:
 
 ## Core Extensions Overview
 
-### evie Actions Extension
+### luv Actions Extension
 
 Provides high-level orchestration and coordination capabilities across other extensions.
 
@@ -270,14 +270,14 @@ Enables AI agents to interact directly with GitHub repositories and manage devel
 
 - Repository management (cloning, creating, reading contents)
 - Issue tracking and management
-- Pull request creation and review
+- Pull request creation and rluvw
 - Code modification and improvement
 - Branch management
 - Automated code fixes and improvements
 
 **Example Use Cases:**
 
-- Automated code reviews
+- Automated code rluvws
 - Issue resolution and PR creation
 - Repository maintenance
 - Code base improvements
@@ -395,7 +395,7 @@ class your_extension(Extensions):
 
 ### Docstring Design
 
-Docstrings are crucial for evie extensions as they serve as the primary guidance for AI agents to understand when and how to use commands. Well-designed docstrings should include:
+Docstrings are crucial for luv extensions as they serve as the primary guidance for AI agents to understand when and how to use commands. Well-designed docstrings should include:
 
 #### Extension Class Docstring
 

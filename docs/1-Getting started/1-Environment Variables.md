@@ -1,13 +1,13 @@
 # Environment Variables
 
-The script sets up various environment variables for evie. Some key variables and their purposes include:
+The script sets up various environment variables for luv. Some key variables and their purposes include:
 
-- `evie_API_KEY`: API key for evie (**automatically generated if not provided**)
-- `evie_URI`: URI for the evie API
-- `evie_BRANCH`: evie version to use (`stable` or `dev`)
-- `evie_AUTO_UPDATE`: Whether to automatically update evie
-- `evie_RLHF`: Enable reinforcement learning from hevien feedback (thumbs up/down buttons in UI)
-- `evie_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
+- `luv_API_KEY`: API key for luv (**automatically generated if not provided**)
+- `luv_URI`: URI for the luv API
+- `luv_BRANCH`: luv version to use (`stable` or `dev`)
+- `luv_AUTO_UPDATE`: Whether to automatically update luv
+- `luv_RLHF`: Enable reinforcement learning from hluvn feedback (thumbs up/down buttons in UI)
+- `luv_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
 - `AUTH_PROVIDER`: Authentication provider (`none` or `magicalauth`)
 - `INTERACTIVE_MODE`: Should always be set to `chat` (`form` mode is experimental)
 - `THEME_NAME`: UI color scheme (`default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)

@@ -1,7 +1,7 @@
 # Google Gemini
 
 - [Google Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini)
-- [evie](https://github.com/miklicfranc29/evie)
+- [luv](https://github.com/rave0790/luv)
 
 ## Quick Start Guide
 

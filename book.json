@@ -1,7 +1,7 @@
 {
   "gitbook": ">=3.0.0",
-  "title": "evie",
-  "description": "evie is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, evie delivers efficient and comprehensive AI solutions.",
+  "title": "luv",
+  "description": "luv is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, luv delivers efficient and comprehensive AI solutions.",
   "root": "./docs/",
   "structure": {
     "readme": "README.md",
@@ -18,11 +18,11 @@
       "minTocSize": 2
     },
     "github-issue-feedback": {
-      "repo": "miklicfranc29/evie",
+      "repo": "rave0790/luv",
       "label": "Submit an issue"
     },
     "edit-link": {
-      "base": "https://github.com/miklicfranc29/evie/edit/master/docs/",
+      "base": "https://github.com/rave0790/luv/edit/master/docs/",
       "label": "Edit"
     }
   },

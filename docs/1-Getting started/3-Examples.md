@@ -1,28 +1,28 @@
 # Examples
 
-We plan to build more examples but would love to see what you build with evie.  If you have an example you would like to share, please submit a pull request to add it to this page.
+We plan to build more examples but would love to see what you build with luv.  If you have an example you would like to share, please submit a pull request to add it to this page.
 
 ## Expert Agent Example
 
-Example of a basic evie expert agent:  Create your agent, make it learn from whichever files or websites you want. You can try it out in the same notebook and in the web interface.
+Example of a basic luv expert agent:  Create your agent, make it learn from whichever files or websites you want. You can try it out in the same notebook and in the web interface.
 
 You can open this file in a Jupyter Notebook and run the code cells to see the example in action.
 
-- [ezLocalai Example](https://github.com/miklicfranc29/evie/blob/main/examples/evie-Expert-ezLocalai.ipynb)
-- [OpenAI Example](https://github.com/miklicfranc29/evie/blob/main/examples/evie-Expert-OAI.ipynb)
+- [ezLocalai Example](https://github.com/rave0790/luv/blob/main/examples/luv-Expert-ezLocalai.ipynb)
+- [OpenAI Example](https://github.com/rave0790/luv/blob/main/examples/luv-Expert-OAI.ipynb)
 
 ## Voice Chat Example
 
-Example of a basic evie voice chat: Make the agent listen to you saying a specific word that makes it take what you say, send it to the agent, and then execute an evie function. In this example, you can use two different wake functions, `chat` and `instruct`. When this example is running, and you say each of the wake words, it will take the words you say after that, send them to the agent, and respond back to you with an audio response.
+Example of a basic luv voice chat: Make the agent listen to you saying a specific word that makes it take what you say, send it to the agent, and then execute an luv function. In this example, you can use two different wake functions, `chat` and `instruct`. When this example is running, and you say each of the wake words, it will take the words you say after that, send them to the agent, and respond back to you with an audio response.
 
-You can open this file in a Jupyter Notebook and run the code cells to see the example in action. <https://github.com/miklicfranc29/evie/blob/main/examples/Voice.ipynb>
+You can open this file in a Jupyter Notebook and run the code cells to see the example in action. <https://github.com/rave0790/luv/blob/main/examples/Voice.ipynb>
 
 ## OpenAI Style Chat Completions Endpoint Example
 
-See the details of this [pull request](https://github.com/miklicfranc29/evie/pull/1149) for example usage of the chat completions endpoint in evie.
+See the details of this [pull request](https://github.com/rave0790/luv/pull/1149) for example usage of the chat completions endpoint in luv.
 
 - Built in accommodations for uploading audio, files, or images to the pipeline of chat completions.
-- Adds support for the `gpt-4-vision-preview` model allowing images to be uploaded with the same syntax. Follow syntax from OpenAI documentation on how your request should look to send images <https://platform.openai.com/docs/guides/vision>
+- Adds support for the `gpt-4-vision-prluvw` model allowing images to be uploaded with the same syntax. Follow syntax from OpenAI documentation on how your request should look to send images <https://platform.openai.com/docs/guides/vision>
 - Adds support for vision models being used with [ezLocalai](https://github.com/DevXT-LLC/ezlocalai) using the same OpenAI endpoint syntax mentioned above.
 - Audio upload support through the chat completions endpoint has been implemented.
 - File upload support through the chat completions endpoint has been implemented.
@@ -57,7 +57,7 @@ response = openai.chat.completions.create(
                 {
                     "type": "text_url",  # Or just "url"
                     "url": {  # Content of the text or URL for it to be scraped
-                        "url": "https://evie.com"
+                        "url": "https://luv.com"
                     },
                     "collection_number": 0,  # Optional field, defaults to 0.
                 },

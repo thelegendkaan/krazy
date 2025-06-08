@@ -1,10 +1,10 @@
-# evie Chat Completions
+# luv Chat Completions
 
-The evie Chat Completions endpoint matches the behavior of the OpenAI Chat Completions API, but with additional features and functionality based on running prompt templates, commands, and chains according to the agent's settings and `mode`.
+The luv Chat Completions endpoint matches the behavior of the OpenAI Chat Completions API, but with additional features and functionality based on running prompt templates, commands, and chains according to the agent's settings and `mode`.
 
 ## Overview
 
-evie is an AI agent orchestration framework that provides a chat completions workflow similar to OpenAI's Chat Completions API, but with enhanced capabilities. The system can handle various input types, process files, perform data analysis, and execute different modes of operation.
+luv is an AI agent orchestration framework that provides a chat completions workflow similar to OpenAI's Chat Completions API, but with enhanced capabilities. The system can handle various input types, process files, perform data analysis, and execute different modes of operation.
 
 ## Workflow Stages
 
@@ -63,7 +63,7 @@ If no mode is defined, the chat completions endpoint will use the `Chat` prompt 
 
 ## File Handling and Data Analysis
 
-evie has advanced capabilities for handling various file types and performing data analysis:
+luv has advanced capabilities for handling various file types and performing data analysis:
 
 - Supports multiple file types: CSV, PDF, ZIP, Excel (XLSX, XLS), Word (DOC, DOCX), audio files, and images
 - CSV file analysis:
@@ -91,13 +91,13 @@ evie has advanced capabilities for handling various file types and performing da
 
 ## Usage Example and Field Descriptions
 
-To use the `openai` Python package to interact with evie agents, you can use the following code snippet:
+To use the `openai` Python package to interact with luv agents, you can use the following code snippet:
 
 ```python
 import openai
 
 openai.base_url = "http://localhost:7437/v1/"
-openai.api_key = "Your evie API Key"
+openai.api_key = "Your luv API Key"
 openai.api_type = "openai"
 
 response = openai.chat.completions.create(
@@ -121,9 +121,9 @@ response = openai.chat.completions.create(
                 },
                 {
                     "type": "text_url",
-                    "file_name": "evie_info.txt",
+                    "file_name": "luv_info.txt",
                     "text_url": {
-                        "url": "https://evie.com"
+                        "url": "https://luv.com"
                     },
                     "collection_number": "0", # Save to collection 0 instead of the conversational memories
                 },
@@ -160,7 +160,7 @@ print(response.choices[0].message.content)
 
 ### Field Descriptions
 
-- `model`: The name of the evie agent you want to interact with.
+- `model`: The name of the luv agent you want to interact with.
 - `user`: The conversation name you want to use. This helps maintain context across multiple interactions.
 - `create_image`: Set to "true" to generate an image using the agent's designated image provider and send it with the response.
 - `context_results`: The number of relevant memories to inject into the conversation. Default is 5 if not set.
