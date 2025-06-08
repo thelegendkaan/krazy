@@ -18,10 +18,10 @@ except ImportError:
     import pyaudio
 
 try:
-    from vitalsdk import vitalSDK
+    from umasdk import umaSDK
 except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "vitalsdk"])
-    from vitalsdk import vitalSDK
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "umasdk"])
+    from umasdk import umaSDK
 
 try:
     from faster_whisper import WhisperModel
@@ -44,11 +44,11 @@ except ImportError:
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    filename="vital_listen.log",
+    filename="uma_listen.log",
 )
 
 
-class vitalListen:
+class umaListen:
     def __init__(
         self,
         server="http://localhost:7437",
@@ -58,7 +58,7 @@ class vitalListen:
         whisper_model="base.en",
         wake_word="hey assistant",
     ):
-        self.sdk = vitalSDK(base_uri=server, api_key=api_key)
+        self.sdk = umaSDK(base_uri=server, api_key=api_key)
         self.agent_name = agent_name
         self.wake_word = wake_word.lower()
         self.wake_functions = {"chat": self.default_voice_chat}
@@ -348,12 +348,12 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="vital Voice Assistant with Continuous Recording"
+        description="uma Voice Assistant with Continuous Recording"
     )
     parser.add_argument(
-        "--server", default="http://localhost:7437", help="vital server URL"
+        "--server", default="http://localhost:7437", help="uma server URL"
     )
-    parser.add_argument("--api_key", default="", help="vital API key")
+    parser.add_argument("--api_key", default="", help="uma API key")
     parser.add_argument("--agent_name", default="gpt4free", help="Name of the agent")
     parser.add_argument(
         "--conversation_name", default="", help="Name of the conversation"
@@ -368,7 +368,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     try:
-        listener = vitalListen(
+        listener = umaListen(
             server=args.server,
             api_key=args.api_key,
             agent_name=args.agent_name,
@@ -378,5 +378,5 @@ if __name__ == "__main__":
         )
         listener.listen()
     except Exception as e:
-        logging.error(f"Error initializing or running vitalListen: {str(e)}")
+        logging.error(f"Error initializing or running umaListen: {str(e)}")
         logging.debug(traceback.format_exc())
