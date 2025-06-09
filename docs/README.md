@@ -1,22 +1,6 @@
-# goai
+# GoAI
 
-[![GitHub](https://img.shields.io/badge/GitHub-Sponsor%20Josh%20XT-blue?logo=github&style=plastic)](https://github.com/sponsors/AidanCampbell97) [![PayPal](https://img.shields.io/badge/PayPal-Sponsor%20Josh%20XT-blue.svg?logo=paypal&style=plastic)](https://paypal.me/joshxt) [![Ko-Fi](https://img.shields.io/badge/Kofi-Sponsor%20Josh%20XT-blue.svg?logo=kofi&style=plastic)](https://ko-fi.com/joshxt)
-
-[![GitHub](https://img.shields.io/badge/GitHub-goai%20Core-blue?logo=github&style=plastic)](https://github.com/AidanCampbell97/goai) [![GitHub](https://img.shields.io/badge/GitHub-goai%20Interactive%20UI-blue?logo=github&style=plastic)](https://github.com/JamesonRGrieve/goai-Interactive)
-
-[![GitHub](https://img.shields.io/badge/GitHub-goai%20Python%20SDK-blue?logo=github&style=plastic)](https://github.com/goai/python-sdk) [![pypi](https://img.shields.io/badge/pypi-goai%20Python%20SDK-blue?logo=pypi&style=plastic)](https://pypi.org/project/goaisdk/)
-
-[![GitHub](https://img.shields.io/badge/GitHub-goai%20TypeScript%20SDK-blue?logo=github&style=plastic)](https://github.com/goai/typescript-sdk) [![npm](https://img.shields.io/badge/npm-goai%20TypeScript%20SDK-blue?logo=npm&style=plastic)](https://www.npmjs.com/package/goai)
-
-[![GitHub](https://img.shields.io/badge/GitHub-goai%20Dart%20SDK-blue?logo=github&style=plastic)](https://github.com/goai/dart-sdk) [![GitHub](https://img.shields.io/badge/GitHub-goai%20Rust%20SDK-blue?logo=github&style=plastic)](https://github.com/birdup000/goai-Rust-Dev) 
-[![GitHub](https://img.shields.io/badge/GitHub-goai%20Zig%20SDK-blue?logo=github&style=plastic)](https://github.com/birdup000/goai-Zig-SDK)
-
-[![Discord](https://img.shields.io/discord/1097720481970397356?label=Discord&logo=discord&logoColor=white&style=plastic&color=5865f2)](https://discord.gg/d3TkHRZcjD)
-[![Twitter](https://img.shields.io/badge/Twitter-Follow_@Josh_XT-blue?logo=twitter&style=plastic)](https://twitter.com/Josh_XT)
-
-[![Logo](https://AidanCampbell97.github.io/goai/images/goai-gradient-flat.svg)](https://AidanCampbell97.github.io/goai/)
-
-goai is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, goai stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, goai is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
+GoAI is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, goai stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, goai is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
 
 Embracing the spirit of extremity in every facet of life, we introduce goai. This advanced AI Automation Platform is our bold step towards the realization of Artificial General Intelligence (AGI). Seamlessly orchestrating instruction management and executing complex tasks across diverse AI providers, goai combines adaptive memory, smart features, and a versatile plugin system to maximize AI potential. With our unwavering commitment to innovation, we're dedicated to pushing the boundaries of AI and bringing AGI closer to reality.
 
