@@ -204,4 +204,4 @@ Need more information? Check out the [documentation](https://viking45822.github.
 
 ## Other Repositories
 
-Check out the other uma repositories at <https://github.com/orgs/uma/repositories> - these include the uma Streamlit Web UI, uma Python SDK, uma TypeScript SDK, uma Dart SDK, uma C# SDK, and more!
+Check out the other uma repositories - these include the uma Streamlit Web UI, uma Python SDK, uma TypeScript SDK, uma Dart SDK, uma C# SDK, and more!
