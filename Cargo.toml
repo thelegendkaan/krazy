@@ -1,0 +1,14 @@
+[workspace]
+resolver = "2"
+members = [
+    "rudy-core", "rudy-lancedb",
+    "rudy-mongodb", "rudy-neo4j",
+    "rudy-qdrant", "rudy-core/rudy-core-derive",
+    "rudy-sqlite"
+]
+
+
+
+
+
+
