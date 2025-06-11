@@ -81,5 +81,4 @@ The following providers are available as separate companion-crates:
 <p align="center">
 <br>
 <br>
-<img src="img/built-by-playgrounds.svg" alt="Build by Playgrounds" width="30%">
 </p>
