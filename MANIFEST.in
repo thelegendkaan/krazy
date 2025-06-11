@@ -3,4 +3,3 @@ recursive-include xdai *
 recursive-include tests *
 recursive-include streamlit *
 recursive-include docs *
-
