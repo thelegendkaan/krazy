@@ -1,6 +1,6 @@
 # Futr AI
 
-futr is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, futr stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, futr is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
+Futr is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, futr stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, futr is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
 
 Embracing the spirit of extremity in every facet of life, we introduce futr. This advanced AI Automation Platform is our bold step towards the realization of Artificial General Intelligence (AGI). Seamlessly orchestrating instruction management and executing complex tasks across diverse AI providers, futr combines adaptive memory, smart features, and a versatile plugin system to maximize AI potential. With our unwavering commitment to innovation, we're dedicated to pushing the boundaries of AI and bringing AGI closer to reality.
 
@@ -200,8 +200,8 @@ Each futr Agent has its own settings for interfacing with AI providers, and othe
 
 ## Documentation
 
-Need more information? Check out the [documentation](https://pmcvay1003.github.io/futr) for more details to get a better understanding of the concepts and features of futr.
+Need more information? Check out the documentation for more details to get a better understanding of the concepts and features of futr.
 
 ## Other Repositories
 
-Check out the other futr repositories at <https://github.com/orgs/futr/repositories> - these include the futr Streamlit Web UI, futr Python SDK, futr TypeScript SDK, futr Dart SDK, futr C# SDK, and more!
+Check out the other futr repositories - these include the futr Streamlit Web UI, futr Python SDK, futr TypeScript SDK, futr Dart SDK, futr C# SDK, and more!
