@@ -119,7 +119,7 @@ def check_prerequisites():
         print("Docker is not installed.")
         install = prompt_user("Would you like to install Docker? (y/n)", "y")
         if install.lower() != "y":
-            print("Docker is required to run xdai. Exiting.")
+            print("Docker is required to run futr. Exiting.")
             sys.exit(1)
         if not install_docker():
             print("Failed to install Docker. Please install it manually and try again.")
@@ -129,7 +129,7 @@ def check_prerequisites():
         print("Docker Compose is not installed.")
         install = prompt_user("Would you like to install Docker Compose? (y/n)", "y")
         if install.lower() != "y":
-            print("Docker Compose is required to run xdai. Exiting.")
+            print("Docker Compose is required to run futr. Exiting.")
             sys.exit(1)
         if not install_docker_compose():
             print(
@@ -170,29 +170,29 @@ def get_default_env_vars():
     workspace_folder = os.path.normpath(os.path.join(os.getcwd(), "WORKSPACE"))
     machine_tz = get_localzone()
     return {
-        "xdai_API_KEY": "",
-        "xdai_URI": "http://localhost:7437",
-        "xdai_PORT": "7437",
-        "xdai_INTERACTIVE_PORT": "3437",
-        "xdai_AGENT": "xdai",
-        "xdai_BRANCH": "stable",
-        "xdai_FILE_UPLOAD_ENABLED": "true",
-        "xdai_VOICE_INPUT_ENABLED": "true",
-        "xdai_FOOTER_MESSAGE": "Powered by xdai",
-        "xdai_REQUIRE_API_KEY": "false",
-        "xdai_RLHF": "true",
-        "xdai_SHOW_SELECTION": "conversation,agent",
-        "xdai_SHOW_AGENT_BAR": "true",
-        "xdai_SHOW_APP_BAR": "true",
-        "xdai_CONVERSATION_MODE": "select",
-        "xdai_SHOW_OVERRIDE_SWITCHES": "tts,websearch,analyze-user-input",
+        "futr_API_KEY": "",
+        "futr_URI": "http://localhost:7437",
+        "futr_PORT": "7437",
+        "futr_INTERACTIVE_PORT": "3437",
+        "futr_AGENT": "futr",
+        "futr_BRANCH": "stable",
+        "futr_FILE_UPLOAD_ENABLED": "true",
+        "futr_VOICE_INPUT_ENABLED": "true",
+        "futr_FOOTER_MESSAGE": "Powered by futr",
+        "futr_REQUIRE_API_KEY": "false",
+        "futr_RLHF": "true",
+        "futr_SHOW_SELECTION": "conversation,agent",
+        "futr_SHOW_AGENT_BAR": "true",
+        "futr_SHOW_APP_BAR": "true",
+        "futr_CONVERSATION_MODE": "select",
+        "futr_SHOW_OVERRIDE_SWITCHES": "tts,websearch,analyze-user-input",
         "ALLOWED_DOMAINS": "*",
-        "APP_DESCRIPTION": "A chat powered by xdai.",
-        "APP_NAME": "xdai Chat",
+        "APP_DESCRIPTION": "A chat powered by futr.",
+        "APP_NAME": "futr Chat",
         "APP_URI": "http://localhost:3437",
         "AUTH_WEB": "http://localhost:3437/user",
         "CREATE_AGENT_ON_REGISTER": "true",
-        "CREATE_xdai_AGENT": "true",
+        "CREATE_futr_AGENT": "true",
         "DISABLED_PROVIDERS": "",
         "DISABLED_EXTENSIONS": "",
         "WORKING_DIRECTORY": workspace_folder.replace("\\", "/"),
@@ -201,11 +201,11 @@ def get_default_env_vars():
         "THEME_NAME": "doom",
         "ALLOW_EMAIL_SIGN_IN": "true",
         "DATABASE_TYPE": "sqlite",
-        "DATABASE_NAME": "models/xdai",
+        "DATABASE_NAME": "models/futr",
         "LOG_LEVEL": "INFO",
         "LOG_FORMAT": "%(asctime)s | %(levelname)s | %(message)s",
         "UVICORN_WORKERS": "10",
-        "xdai_AUTO_UPDATE": "true",
+        "futr_AUTO_UPDATE": "true",
         "EZLOCALAI_URI": f"http://{get_local_ip()}:8091/v1/",
         "DEFAULT_MODEL": "QuantFactory/dolphin-2.9.2-qwen2-7b-GGUF",
         "VISION_MODEL": "deepseek-ai/deepseek-vl-1.3b-chat",
@@ -214,9 +214,9 @@ def get_default_env_vars():
         "GPU_LAYERS": "0",
         "WITH_EZLOCALAI": "false",
         "REGISTRATION_DISABLED": "false",
-        "xdai_ALLOW_MESSAGE_EDITING": "true",
-        "xdai_ALLOW_MESSAGE_DELETION": "true",
-        "xdai_SHOW_CHAT_THEME_TOGGLES": "",
+        "futr_ALLOW_MESSAGE_EDITING": "true",
+        "futr_ALLOW_MESSAGE_DELETION": "true",
+        "futr_SHOW_CHAT_THEME_TOGGLES": "",
         "LOG_VERBOSITY_SERVER": "3",
         "AOL_CLIENT_ID": "",
         "AOL_CLIENT_SECRET": "",
@@ -250,9 +250,9 @@ def set_environment(env_updates=None):
         for key, value in env_updates.items():
             if key in env_vars:
                 env_vars[key] = value
-    # Ensure xdai_API_KEY is set
-    if env_vars["xdai_API_KEY"] == "":
-        env_vars["xdai_API_KEY"] = "".join(
+    # Ensure futr_API_KEY is set
+    if env_vars["futr_API_KEY"] == "":
+        env_vars["futr_API_KEY"] = "".join(
             random.choice(
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
             )
@@ -268,13 +268,13 @@ def set_environment(env_updates=None):
         print("Starting ezLocalai, this can take several minutes...")
         start_ezlocalai()
     dockerfile = "docker-compose.yml"
-    if env_vars["xdai_BRANCH"] != "stable":
+    if env_vars["futr_BRANCH"] != "stable":
         dockerfile = "docker-compose-dev.yml"
-    if env_vars["xdai_BRANCH"] != "stable":
+    if env_vars["futr_BRANCH"] != "stable":
         dockerfile = "docker-compose-dev.yml"
     else:
         dockerfile = "docker-compose.yml"
-    if str(env_vars["xdai_AUTO_UPDATE"]).lower() == "true":
+    if str(env_vars["futr_AUTO_UPDATE"]).lower() == "true":
         command = f"docker compose -f {dockerfile} stop && docker compose -f {dockerfile} pull && docker compose -f {dockerfile} up -d"
     else:
         command = f"docker compose -f {dockerfile} stop && docker compose -f {dockerfile} up -d"
@@ -282,9 +282,9 @@ def set_environment(env_updates=None):
     try:
         run_shell_command(command)
     except KeyboardInterrupt:
-        print("\nStopping xdai containers...")
+        print("\nStopping futr containers...")
         run_shell_command(f"docker compose -f {dockerfile} stop")
-        print("xdai containers stopped.")
+        print("futr containers stopped.")
     except subprocess.CalledProcessError as e:
         print(f"An error occurred: {e}")
     return env_vars
@@ -381,7 +381,7 @@ def start_ezlocalai():
 
 if __name__ == "__main__":
     check_prerequisites()
-    parser = argparse.ArgumentParser(description="xdai Environment Setup")
+    parser = argparse.ArgumentParser(description="futr Environment Setup")
     # Add arguments for each environment variable
     for key, value in get_default_env_vars().items():
         parser.add_argument(
@@ -396,19 +396,19 @@ if __name__ == "__main__":
     arg_dict = {k: v for k, v in vars(args).items() if v is not None}
     # Convert hyphenated arg names back to underscore format
     env_updates = {k.upper().replace("-", "_"): v for k, v in arg_dict.items()}
-    # Check if .env file exists and if xdai_AUTO_UPDATE is not set via command line
-    if not os.path.exists(".env") and "xdai_AUTO_UPDATE" not in env_updates:
+    # Check if .env file exists and if futr_AUTO_UPDATE is not set via command line
+    if not os.path.exists(".env") and "futr_AUTO_UPDATE" not in env_updates:
         auto_update = prompt_user(
-            "Would you like xdai to auto update when this script is run in the future? (Y for yes, N for no)",
+            "Would you like futr to auto update when this script is run in the future? (Y for yes, N for no)",
             "y",
         )
         if auto_update.lower() == "y" or auto_update.lower() == "yes":
             auto_update = "true"
         else:
             auto_update = "false"
-        env_updates["xdai_AUTO_UPDATE"] = auto_update
+        env_updates["futr_AUTO_UPDATE"] = auto_update
     # Apply updates and restart server
-    print("Please wait while xdai is starting, this can take several minutes...")
+    print("Please wait while futr is starting, this can take several minutes...")
     set_environment(env_updates=env_updates)
 
 
