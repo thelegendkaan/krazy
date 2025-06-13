@@ -6,7 +6,7 @@ import requests
 from Globals import getenv
 import uuid
 
-try:
+try: 
     import openai
 except ImportError:
     import sys
