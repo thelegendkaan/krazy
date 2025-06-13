@@ -11,7 +11,7 @@ import asyncio
 
 
 class Task:
-    def __init__(self, token: str):
+    def __init__(self, token: str): 
         self.auth = MagicalAuth(token=token)
         self.user_id = self.auth.user_id
         self.ApiClient = higherSDK(base_uri=getenv("higher_URI"), api_key=token)
