@@ -1,9 +1,0 @@
-include requirements.txt
-recursive-include luv *
-recursive-include tests *
-recursive-include streamlit *
-recursive-include docs *  
-
-
- 
- 
