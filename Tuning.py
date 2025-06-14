@@ -3,7 +3,7 @@ import sys
 import os
 import copy
 
-try:
+try: 
     import torch
 except ImportError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "torch"])
