@@ -8,5 +8,5 @@ Due to the nature of the fast development that is happening in this project, onl
 
 If you find a vulnerability, please contact us at contact@krazy.com rather than creating a GitHub issue to allow us some time to fix it before it is a known vulnerability to others. 
 
-
+ 
  
