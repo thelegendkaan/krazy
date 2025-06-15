@@ -16,17 +16,17 @@ requirements = []
 for reqs in install_requires:
     if "--" not in reqs and ":" not in reqs and "#" not in reqs:
         requirements.append(reqs)
-# Get version from version file in brave/version
-with open(os.path.join(this_directory, "brave/version"), encoding="utf-8") as f:
+# Get version from version file in higher/version
+with open(os.path.join(this_directory, "higher/version"), encoding="utf-8") as f:
     version = f.read().strip()
 
 setup(
-    name="brave",
+    name="higher",
     version=version,
     description="An Artificial Intelligence Automation Platform. AI Instruction management from various providers, has an adaptive memory, and a versatile plugin system with many commands including web browsing. Supports many AI providers and models and growing support every day.",
     long_description=long_description,
     long_description_content_type="text/markdown",  # This should match the format of your README
-    author="brave",
+    author="higher",
     packages=find_packages(),
     python_requires=">=3.10",
     install_requires=requirements,

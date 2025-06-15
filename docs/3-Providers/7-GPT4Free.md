@@ -1,7 +1,7 @@
 # GPT4Free
 
 - [GPT4Free](https://github.com/xtekky/gpt4free)
-- [brave](https://github.com/delmenhorst09/brave)
+- [higher](https://github.com/jscalpello/higher)
 
 ## Disclaimer
 

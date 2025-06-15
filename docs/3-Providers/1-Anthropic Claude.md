@@ -1,7 +1,7 @@
 # Anthropic Claude
 
 - [Anthropic Claude](https://console.anthropic.com/docs/access)
-- [brave](https://github.com/delmenhorst09/brave)
+- [higher](https://github.com/jscalpello/higher)
 
 ## Quick Start Guide
 

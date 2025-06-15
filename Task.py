@@ -1,6 +1,6 @@
 from DB import get_session, TaskCategory, TaskItem, Agent
 from Globals import getenv
-from bravesdk import braveSDK
+from highersdk import higherSDK
 from MagicalAuth import MagicalAuth
 from Conversations import get_conversation_name_by_id 
 from sqlalchemy.orm import joinedload
@@ -14,7 +14,7 @@ class Task:
     def __init__(self, token: str):
         self.auth = MagicalAuth(token=token)
         self.user_id = self.auth.user_id
-        self.ApiClient = braveSDK(base_uri=getenv("brave_URI"), api_key=token)
+        self.ApiClient = higherSDK(base_uri=getenv("higher_URI"), api_key=token)
 
     async def create_category(
         self,

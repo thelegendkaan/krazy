@@ -1,25 +1,25 @@
 # Examples
 
-We plan to build more examples but would love to see what you build with brave.  If you have an example you would like to share, please submit a pull request to add it to this page.
+We plan to build more examples but would love to see what you build with higher.  If you have an example you would like to share, please submit a pull request to add it to this page.
 
 ## Expert Agent Example
 
-Example of a basic brave expert agent:  Create your agent, make it learn from whichever files or websites you want. You can try it out in the same notebook and in the web interface.
+Example of a basic higher expert agent:  Create your agent, make it learn from whichever files or websites you want. You can try it out in the same notebook and in the web interface.
 
 You can open this file in a Jupyter Notebook and run the code cells to see the example in action.
 
-- [ezLocalai Example](https://github.com/delmenhorst09/brave/blob/main/examples/brave-Expert-ezLocalai.ipynb)
-- [OpenAI Example](https://github.com/delmenhorst09/brave/blob/main/examples/brave-Expert-OAI.ipynb)
+- [ezLocalai Example](https://github.com/jscalpello/higher/blob/main/examples/higher-Expert-ezLocalai.ipynb)
+- [OpenAI Example](https://github.com/jscalpello/higher/blob/main/examples/higher-Expert-OAI.ipynb)
 
 ## Voice Chat Example
 
-Example of a basic brave voice chat: Make the agent listen to you saying a specific word that makes it take what you say, send it to the agent, and then execute an brave function. In this example, you can use two different wake functions, `chat` and `instruct`. When this example is running, and you say each of the wake words, it will take the words you say after that, send them to the agent, and respond back to you with an audio response.
+Example of a basic higher voice chat: Make the agent listen to you saying a specific word that makes it take what you say, send it to the agent, and then execute an higher function. In this example, you can use two different wake functions, `chat` and `instruct`. When this example is running, and you say each of the wake words, it will take the words you say after that, send them to the agent, and respond back to you with an audio response.
 
-You can open this file in a Jupyter Notebook and run the code cells to see the example in action. <https://github.com/delmenhorst09/brave/blob/main/examples/Voice.ipynb>
+You can open this file in a Jupyter Notebook and run the code cells to see the example in action. <https://github.com/jscalpello/higher/blob/main/examples/Voice.ipynb>
 
 ## OpenAI Style Chat Completions Endpoint Example
 
-See the details of this [pull request](https://github.com/delmenhorst09/brave/pull/1149) for example usage of the chat completions endpoint in brave.
+See the details of this [pull request](https://github.com/jscalpello/higher/pull/1149) for example usage of the chat completions endpoint in higher.
 
 - Built in accommodations for uploading audio, files, or images to the pipeline of chat completions.
 - Adds support for the `gpt-4-vision-preview` model allowing images to be uploaded with the same syntax. Follow syntax from OpenAI documentation on how your request should look to send images <https://platform.openai.com/docs/guides/vision>
@@ -57,7 +57,7 @@ response = openai.chat.completions.create(
                 {
                     "type": "text_url",  # Or just "url"
                     "url": {  # Content of the text or URL for it to be scraped
-                        "url": "https://brave.com"
+                        "url": "https://higher.com"
                     },
                     "collection_number": 0,  # Optional field, defaults to 0.
                 },

@@ -35,7 +35,7 @@ import os
 import re
 
 
-class brave:
+class higher:
     def __init__(
         self,
         user: str,
@@ -59,7 +59,7 @@ class brave:
             self.conversation_id = self.conversation.get_conversation_id()
             self.conversation_name = conversation_name
         self.agent_name = agent_name
-        self.uri = getenv("brave_URI")
+        self.uri = getenv("higher_URI")
         if collection_id is not None:
             self.collection_id = str(collection_id)
         elif conversation_name:
@@ -199,7 +199,7 @@ class brave:
         **kwargs,
     ):
         """
-        Run inference on the brave agent
+        Run inference on the higher agent
 
         Args:
             user_input (str): User input to the agent
@@ -2148,14 +2148,14 @@ class brave:
         **kwargs,
     ):
         """
-        Converts a string to a Pydantic model using an brave agent.
+        Converts a string to a Pydantic model using an higher agent.
 
         Args:
         input_string (str): The string to convert to a model.
         model (Type[BaseModel]): The Pydantic model to convert the string to.
         max_failures (int): The maximum number of times to retry the conversion if it fails.
         response_type (str): The type of response to return. Either 'json' or None. None will return the model.
-        **kwargs: Additional arguments to pass to the brave agent as prompt arguments.
+        **kwargs: Additional arguments to pass to the higher agent as prompt arguments.
         """
         input_string = str(input_string)
         schema = self._generate_detailed_schema(model)

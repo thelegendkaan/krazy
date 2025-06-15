@@ -520,7 +520,7 @@ class WorkspaceManager(SecurityValidationMixin):
 
     def _ensure_container_exists(self):
         """Ensure the storage container exists with proper validation"""
-        container_name = getenv("STORAGE_CONTAINER", "brave-workspace")
+        container_name = getenv("STORAGE_CONTAINER", "higher-workspace")
         container_name = self._sanitize_container_name(container_name)
 
         try:

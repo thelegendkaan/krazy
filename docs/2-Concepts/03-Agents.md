@@ -1,6 +1,6 @@
 # Agents
 
-Agents are a combintation of a single model and a single directive. An agent can be given a task to pursue. In the course of pursuing this task, the agent may request the execution of commands through the brave server. If this occurs, the result of that command will be passed back into the agent and execution will continue until the agent is satisfied that its goal is complete.
+Agents are a combintation of a single model and a single directive. An agent can be given a task to pursue. In the course of pursuing this task, the agent may request the execution of commands through the higher server. If this occurs, the result of that command will be passed back into the agent and execution will continue until the agent is satisfied that its goal is complete.
 
 ## Agent Settings
 

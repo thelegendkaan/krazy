@@ -1,7 +1,7 @@
 # Hugging Face
 
 - [Hugging Face](https://huggingface.co/docs/transformers/index)
-- [brave](https://github.com/delmenhorst09/brave)
+- [higher](https://github.com/jscalpello/higher)
 
 ## Quick Start Guide
 

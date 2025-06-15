@@ -1,13 +1,13 @@
 # Environment Variables
 
-The script sets up various environment variables for brave. Some key variables and their purposes include:
+The script sets up various environment variables for higher. Some key variables and their purposes include:
 
-- `brave_API_KEY`: API key for brave (**automatically generated if not provided**)
-- `brave_URI`: URI for the brave API
-- `brave_BRANCH`: brave version to use (`stable` or `dev`)
-- `brave_AUTO_UPDATE`: Whether to automatically update brave
-- `brave_RLHF`: Enable reinforcement learning from hbraven feedback (thumbs up/down buttons in UI)
-- `brave_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
+- `higher_API_KEY`: API key for higher (**automatically generated if not provided**)
+- `higher_URI`: URI for the higher API
+- `higher_BRANCH`: higher version to use (`stable` or `dev`)
+- `higher_AUTO_UPDATE`: Whether to automatically update higher
+- `higher_RLHF`: Enable reinforcement learning from hhighern feedback (thumbs up/down buttons in UI)
+- `higher_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
 - `AUTH_PROVIDER`: Authentication provider (`none` or `magicalauth`)
 - `INTERACTIVE_MODE`: Should always be set to `chat` (`form` mode is experimental)
 - `THEME_NAME`: UI color scheme (`default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)

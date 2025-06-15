@@ -54,11 +54,11 @@ except ImportError:
 
 from peft import PeftModel
 from bitsandbytes.functional import dequantize_4bit
-from XT import brave
+from XT import higher
 
 
 def fine_tune_llm(
-    agent_name: str = "brave",
+    agent_name: str = "higher",
     dataset_name: str = "dataset",
     model_name: str = "unsloth/mistral-7b-v0.2",
     max_seq_length: int = 16384,
@@ -68,14 +68,14 @@ def fine_tune_llm(
     api_key: str = "",
 ):
     output_path = "./models"
-    # Step 1: Build brave dataset
-    brave = brave(
+    # Step 1: Build higher dataset
+    higher = higher(
         user=user,
         api_key=api_key,
         agent_name=agent_name,
         conversation_name=dataset_name,
     )
-    agent_settings = brave.agent_settings
+    agent_settings = higher.agent_settings
     if not agent_settings:
         agent_settings = {}
     huggingface_api_key = (
@@ -83,7 +83,7 @@ def fine_tune_llm(
         if "HUGGINGFACE_API_KEY" in agent_settings
         else None
     )
-    response = brave.create_dataset_from_memories(
+    response = higher.create_dataset_from_memories(
         dataset_name=dataset_name, batch_size=5
     )
     dataset_name = (
@@ -91,7 +91,7 @@ def fine_tune_llm(
     )
     dataset_path = f"./WORKSPACE/{agent_name}/datasets/{dataset_name}.json"
     agent_settings["training"] = True
-    brave.agent_interactions.agent.update_agent_config(
+    higher.agent_interactions.agent.update_agent_config(
         new_config=agent_settings, config_key="settings"
     )
     # Step 2: Create qLora adapter
@@ -173,7 +173,7 @@ def fine_tune_llm(
             huggingface_output_path, use_temp_dir=False, private=private_repo
         )
     agent_settings["training"] = False
-    brave.agent_interactions.agent.update_agent_config(
+    higher.agent_interactions.agent.update_agent_config(
         new_config=agent_settings, config_key="settings"
     )
 
@@ -181,12 +181,12 @@ def fine_tune_llm(
 if __name__ == "__main__":
     # Usage
     fine_tune_llm(
-        agent_name="brave",
+        agent_name="higher",
         dataset_name="dataset",
         model_name="unsloth/llama-3-8b-Instruct-bnb-4bit",
         max_seq_length=16384,
         huggingface_output_path="JoshXT/finetuned-llama-3-8b",
         private_repo=True,
         user="user",
-        api_key="Your brave API Key",
+        api_key="Your higher API Key",
     )

@@ -1,7 +1,7 @@
 {
   "gitbook": ">=3.0.0",
-  "title": "brave",
-  "description": "brave is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, brave delivers efficient and comprehensive AI solutions.",
+  "title": "higher",
+  "description": "higher is a dynamic AI Automation Platform that seamlessly orchestrates instruction management and complex task execution across diverse AI providers. Combining adaptive memory, smart features, and a versatile plugin system, higher delivers efficient and comprehensive AI solutions.",
   "root": "./docs/",
   "structure": {
     "readme": "README.md",
@@ -18,11 +18,11 @@
       "minTocSize": 2
     },
     "github-issue-feedback": {
-      "repo": "delmenhorst09/brave",
+      "repo": "jscalpello/higher",
       "label": "Submit an issue"
     },
     "edit-link": {
-      "base": "https://github.com/delmenhorst09/brave/edit/master/docs/",
+      "base": "https://github.com/jscalpello/higher/edit/master/docs/",
       "label": "Edit"
     }
   },

@@ -7,7 +7,7 @@ Each prompt has a specific format for providing instructions to the AI agents. A
 
 ## Specific Model Prompts for Overrides
 
-Inside of the `brave\prompts` folder, you can add a folder with the name you set in your agent settings for `AI_MODEL` and it will use those prompts instead of the default ones. This allows you to have different prompts for different models that essentially do the same thing but with different wording that might be more optimized for that model.
+Inside of the `higher\prompts` folder, you can add a folder with the name you set in your agent settings for `AI_MODEL` and it will use those prompts instead of the default ones. This allows you to have different prompts for different models that essentially do the same thing but with different wording that might be more optimized for that model.
 
 For example, `GPT-4` has an 8K token limit, so we over ride the `instruct` prompt to let it know that it has a `4000 word limit` instead of the default prompt that says `500 word limit.`
 
