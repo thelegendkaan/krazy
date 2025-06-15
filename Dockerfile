@@ -7,3 +7,4 @@ WORKDIR /uma
 # RUN python /uma/Transcription.py
 EXPOSE 7437
 ENTRYPOINT ["python3", "DB.py"]
+
