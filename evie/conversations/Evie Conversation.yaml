@@ -2,7 +2,7 @@ interactions:
 - message: What are the most interesting things you can tell me about evie?
   role: USER
   timestamp: August 14, 2023 10:56 PM
-- message: 'evie is an artificial intelligence automation platform that combines
+- message: 'evie is an artificial intelligence automation platform that combines 
     adaptive memory handling, smart features, and a versatile plugin system to optimize
     AI performance and enhance task completion. It offers several key features, including:
 
