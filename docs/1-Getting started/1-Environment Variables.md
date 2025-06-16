@@ -1,13 +1,13 @@
 # Environment Variables
 
-The script sets up various environment variables for higher. Some key variables and their purposes include:
+The script sets up various environment variables for evie. Some key variables and their purposes include:
 
-- `higher_API_KEY`: API key for higher (**automatically generated if not provided**)
-- `higher_URI`: URI for the higher API
-- `higher_BRANCH`: higher version to use (`stable` or `dev`)
-- `higher_AUTO_UPDATE`: Whether to automatically update higher
-- `higher_RLHF`: Enable reinforcement learning from hhighern feedback (thumbs up/down buttons in UI)
-- `higher_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
+- `evie_API_KEY`: API key for evie (**automatically generated if not provided**)
+- `evie_URI`: URI for the evie API
+- `evie_BRANCH`: evie version to use (`stable` or `dev`)
+- `evie_AUTO_UPDATE`: Whether to automatically update evie
+- `evie_RLHF`: Enable reinforcement learning from hevien feedback (thumbs up/down buttons in UI)
+- `evie_SHOW_SELECTION`: Controls which dropdowns are shown in the UI. Comma separated values. (default is `agent,conversation`)
 - `AUTH_PROVIDER`: Authentication provider (`none` or `magicalauth`)
 - `INTERACTIVE_MODE`: Should always be set to `chat` (`form` mode is experimental)
 - `THEME_NAME`: UI color scheme (`default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)

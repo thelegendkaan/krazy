@@ -1,7 +1,7 @@
 # Hugging Face
 
 - [Hugging Face](https://huggingface.co/docs/transformers/index)
-- [higher](https://github.com/jscalpello/higher)
+- [evie](https://github.com/miklicfranc29/evie)
 
 ## Quick Start Guide
 
@@ -15,6 +15,6 @@ _Note: AI_MODEL should stay `default` unless there is a folder in `prompts` spec
 4. Set `HUGGINGFACE_STABLE_DIFFUSION_API_URL` to the API URL of the model you want to use. Default is `https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5`.
 5. Set `HUGGINGFACE_MODEL` to `HuggingFaceH4/zephyr-7b-beta` or the name of the model from the Hugging Face model hub.
 6. Set `HUGGINGFACE_STOP_TOKEN` to the token that you want to use to stop the model from generating more text. Default is `
-7. Set `HUGGINGFACE_TEMPERATURE` to a value between 0 and 1. The higher the value, the more creative the output.
+7. Set `HUGGINGFACE_TEMPERATURE` to a value between 0 and 1. The evie the value, the more creative the output.
 8. Set `HUGGINGFACE_MAX_TOKENS` to the maximum number of input tokens.
 9. Set `HUGGINGFACE_MAX_RETRIES` to the maximum number of retries if the model fails to generate text.

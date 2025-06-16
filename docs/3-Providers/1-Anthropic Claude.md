@@ -1,7 +1,7 @@
 # Anthropic Claude
 
 - [Anthropic Claude](https://console.anthropic.com/docs/access)
-- [higher](https://github.com/jscalpello/higher)
+- [evie](https://github.com/miklicfranc29/evie)
 
 ## Quick Start Guide
 

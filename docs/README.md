@@ -1,12 +1,12 @@
-# Higher AI
+# evie AI
 
-Higher is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, higher stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, higher is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
+evie is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, evie stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, evie is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.
 
-Embracing the spirit of extremity in every facet of life, we introduce higher. This advanced AI Automation Platform is our bold step towards the realization of Artificial General Intelligence (AGI). Seamlessly orchestrating instruction management and executing complex tasks across diverse AI providers, higher combines adaptive memory, smart features, and a versatile plugin system to maximize AI potential. With our unwavering commitment to innovation, we're dedicated to pushing the boundaries of AI and bringing AGI closer to reality.
+Embracing the spirit of extremity in every facet of life, we introduce evie. This advanced AI Automation Platform is our bold step towards the realization of Artificial General Intelligence (AGI). Seamlessly orchestrating instruction management and executing complex tasks across diverse AI providers, evie combines adaptive memory, smart features, and a versatile plugin system to maximize AI potential. With our unwavering commitment to innovation, we're dedicated to pushing the boundaries of AI and bringing AGI closer to reality.
 
 ## Table of Contents 📖
 
-- [higher](#higher)
+- [evie](#evie)
   - [Table of Contents 📖](#table-of-contents-)
   - [⚠️ Disclaimers](#️-disclaimers)
     - [Monitor Your Usage](#monitor-your-usage)
@@ -48,7 +48,7 @@ Please note that using some AI providers (such as OpenAI's GPT-4 API) can be exp
 - **RESTful API**: FastAPI-powered RESTful API for seamless integration with external applications and services.
 - **Expanding AI Support**: Continually updated to include new AI providers and services, ensuring the software stays at the forefront of AI technology.
 
-The features that higher provides cover a wide range of services and are used for different tasks. Refer to [Processes and Frameworks](https://jscalpello.github.io/higher/2-Concepts/01-Processes%20and%20Frameworks.html) for more details about the services and framework.
+The features that evie provides cover a wide range of services and are used for different tasks. Refer to [Processes and Frameworks](https://miklicfranc29.github.io/evie/2-Concepts/01-Processes%20and%20Frameworks.html) for more details about the services and framework.
 
 ## Quick Start Guide
 
@@ -75,8 +75,8 @@ Provide the following prerequisites based on the Operating System you use.
 If you're using Linux, you may need to prefix the `python` command with `sudo` depending on your system configuration.
 
 ```bash
-git clone https://github.com/jscalpello/higher
-cd higher
+git clone https://github.com/miklicfranc29/evie
+cd evie
 python start.py
 ```
 
@@ -93,7 +93,7 @@ Run the script with Python:
 python start.py
 ```
 
-To run higher with ezLocalai, use the `--with-ezlocalai` flag:
+To run evie with ezLocalai, use the `--with-ezlocalai` flag:
 
 ```bash
 python start.py --with-ezlocalai true
@@ -102,38 +102,38 @@ python start.py --with-ezlocalai true
 You can also use command-line arguments to set specific environment variables to run in different ways. For example, to use the development branch and enable auto-updates, run:
 
 ```bash
-python start.py --higher-branch dev --higher-auto-update true --with-ezlocalai true
+python start.py --evie-branch dev --evie-auto-update true --with-ezlocalai true
 ```
 
-- Access the higher Management interface at <http://localhost:8501> to create and manage your agents, prompts, chains, and configurations.
-- Access the higher Interactive interface at <http://localhost:3437> to interact with your configured agents.
-- Access the higher API documentation at <http://localhost:7437>
+- Access the evie Management interface at <http://localhost:8501> to create and manage your agents, prompts, chains, and configurations.
+- Access the evie Interactive interface at <http://localhost:3437> to interact with your configured agents.
+- Access the evie API documentation at <http://localhost:7437>
 
 ### Command-line Options
 
 The script supports setting any of the environment variables via command-line arguments. Here's a detailed list of available options:
 
-1. `--higher-api-key`: Set the higher API key (automatically generated if not provided)
-2. `--higher-uri`: Set the higher URI (default: `http://localhost:7437`)
-3. `--higher-agent`: Set the default higher agent (default: `higher`)
-4. `--higher-branch`: Choose between `stable` and `dev` branches
-5. `--higher-file-upload-enabled`: Enable or disable file uploads (default: `true`)
-6. `--higher-voice-input-enabled`: Enable or disable voice input (default: `true`)
-7. `--higher-footer-message`: Set the footer message (default: `Powered by higher`)
-8. `--higher-require-api-key`: Require API key for access (default: `false`)
-9. `--higher-rlhf`: Enable or disable reinforcement learning from hhighern feedback (default: `true`)
-10. `--higher-show-selection`: Set which selectors to show in the UI (default: `conversation,agent`)
-11. `--higher-show-agent-bar`: Show or hide the agent bar in the UI (default: `true`)
-12. `--higher-show-app-bar`: Show or hide the app bar in the UI (default: `true`)
-13. `--higher-conversation-mode`: Set the conversation mode (default: `select`)
+1. `--evie-api-key`: Set the evie API key (automatically generated if not provided)
+2. `--evie-uri`: Set the evie URI (default: `http://localhost:7437`)
+3. `--evie-agent`: Set the default evie agent (default: `evie`)
+4. `--evie-branch`: Choose between `stable` and `dev` branches
+5. `--evie-file-upload-enabled`: Enable or disable file uploads (default: `true`)
+6. `--evie-voice-input-enabled`: Enable or disable voice input (default: `true`)
+7. `--evie-footer-message`: Set the footer message (default: `Powered by evie`)
+8. `--evie-require-api-key`: Require API key for access (default: `false`)
+9. `--evie-rlhf`: Enable or disable reinforcement learning from hevien feedback (default: `true`)
+10. `--evie-show-selection`: Set which selectors to show in the UI (default: `conversation,agent`)
+11. `--evie-show-agent-bar`: Show or hide the agent bar in the UI (default: `true`)
+12. `--evie-show-app-bar`: Show or hide the app bar in the UI (default: `true`)
+13. `--evie-conversation-mode`: Set the conversation mode (default: `select`)
 14. `--allowed-domains`: Set allowed domains for API access (default: `*`)
 15. `--app-description`: Set the application description
-16. `--app-name`: Set the application name (default: `higher Chat`)
+16. `--app-name`: Set the application name (default: `evie Chat`)
 17. `--app-uri`: Set the application URI (default: `http://localhost:3437`)
 18. `--auth-web`: Set the authentication web URI (default: `http://localhost:3437/user`)
 19. `--auth-provider`: Set the authentication provider (options: `none`, `magicalauth`)
-20. `--create-agent-on-register`: Create an agent named from your `higher_AGENT` environment variable if it is different than `higher` using settings from `default_agent.json` if defined (default: `true`)
-21. `--create-higher-agent`: Create an agent called `higher` and trains it on the higher documentation upon user registration (default: `true`)
+20. `--create-agent-on-register`: Create an agent named from your `evie_AGENT` environment variable if it is different than `evie` using settings from `default_agent.json` if defined (default: `true`)
+21. `--create-evie-agent`: Create an agent called `evie` and trains it on the evie documentation upon user registration (default: `true`)
 22. `--disabled-providers`: Set disabled providers (comma-separated list)
 23. `--disabled-extensions`: Set disabled extensions (comma-separated list)
 24. `--working-directory`: Set the working directory (default: `./WORKSPACE`)
@@ -148,15 +148,15 @@ The script supports setting any of the environment variables via command-line ar
 33. `--theme-name`: Set the UI theme (options: `default`, `christmas`, `conspiracy`, `doom`, `easter`, `halloween`, `valentines`)
 34. `--allow-email-sign-in`: Allow email sign-in (default: `true`)
 35. `--database-type`: Set the database type (options: `sqlite`, `postgres`)
-36. `--database-name`: Set the database name (default: `models/higher`)
+36. `--database-name`: Set the database name (default: `models/evie`)
 37. `--log-level`: Set the logging level (default: `INFO`)
 38. `--log-format`: Set the log format (default: `%(asctime)s | %(levelname)s | %(message)s`)
 40. `--uvicorn-workers`: Set the number of Uvicorn workers (default: `10`)
-41. `--higher-auto-update`: Enable or disable auto-updates (default: `true`)
+41. `--evie-auto-update`: Enable or disable auto-updates (default: `true`)
 
 Options specific to ezLocalai:
 
-1. `--with-ezlocalai`: Start higher with ezLocalai integration.
+1. `--with-ezlocalai`: Start evie with ezLocalai integration.
 2. `--ezlocalai-uri`: Set the ezLocalai URI (default: `http://{local_ip}:8091`)
 3. `--default-model`: Set the default language model for ezLocalai (default: `QuantFactory/dolphin-2.9.2-qwen2-7b-GGUF`)
 4. `--vision-model`: Set the vision model for ezLocalai (default: `deepseek-ai/deepseek-vl-1.3b-chat`)
@@ -174,9 +174,9 @@ python start.py --help
 
 After setting up the environment variables and ensuring Docker and Docker Compose are installed, the script will:
 
-1. Stop any running higher Docker containers
+1. Stop any running evie Docker containers
 2. Pull the latest Docker images (if auto-update is enabled)
-3. Start the higher services using Docker Compose
+3. Start the evie services using Docker Compose
 
 ## Troubleshooting
 
@@ -190,18 +190,18 @@ After setting up the environment variables and ensuring Docker and Docker Compos
 
 ## Security Considerations
 
-- The `higher_API_KEY` is automatically generated if not provided. Ensure to keep this key secure and do not share it publicly.
+- The `evie_API_KEY` is automatically generated if not provided. Ensure to keep this key secure and do not share it publicly.
 - When using authentication providers (GitHub, Google, Microsoft), ensure that the client IDs and secrets are kept confidential.
 - Be cautious when enabling file uploads and voice input, as these features may introduce potential security risks if not properly managed.
 
 ## Configuration
 
-Each higher Agent has its own settings for interfacing with AI providers, and other configuration options. These settings can be set and modified through the web interface.
+Each evie Agent has its own settings for interfacing with AI providers, and other configuration options. These settings can be set and modified through the web interface.
 
 ## Documentation
 
-Need more information? Check out the documentation for more details to get a better understanding of the concepts and features of higher.
+Need more information? Check out the documentation for more details to get a better understanding of the concepts and features of evie.
 
 ## Other Repositories
 
-Check out the other higher repositories - these include the higher Streamlit Web UI, higher Python SDK, higher TypeScript SDK, higher Dart SDK, higher C# SDK, and more!
+Check out the other evie repositories - these include the evie Streamlit Web UI, evie Python SDK, evie TypeScript SDK, evie Dart SDK, evie C# SDK, and more!

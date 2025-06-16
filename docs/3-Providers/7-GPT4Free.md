@@ -1,7 +1,7 @@
 # GPT4Free
 
 - [GPT4Free](https://github.com/xtekky/gpt4free)
-- [higher](https://github.com/jscalpello/higher)
+- [evie](https://github.com/miklicfranc29/evie)
 
 ## Disclaimer
 

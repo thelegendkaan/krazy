@@ -1,7 +1,7 @@
 # Google Gemini
 
 - [Google Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini)
-- [higher](https://github.com/jscalpello/higher)
+- [evie](https://github.com/miklicfranc29/evie)
 
 ## Quick Start Guide
 
