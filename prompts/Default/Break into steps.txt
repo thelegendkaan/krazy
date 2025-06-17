@@ -7,4 +7,4 @@ Primary objective: {user_input}
 Instructions:
 1. Instead of solving the problem, we want to break it down into smaller problems that are easier to solve. 
 2. Be very descriptive for every step that will be required and give those steps in a numbered list.
-3. Consider that each step needs to be worded as an instruction for another AI to follow that is not as smart as you.
+3. Consider that each step needs to be worded as an instruction for another AI to follow that is not as smart as you. 
