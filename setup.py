@@ -26,8 +26,7 @@ setup(
     description="An Artificial Intelligence Automation Platform. AI Instruction management from various providers, has an adaptive memory, and a versatile plugin system with many commands including web browsing. Supports many AI providers and models and growing support every day.",
     long_description=long_description,
     long_description_content_type="text/markdown",  # This should match the format of your README
-    author="Josh XT",
-    author_email="josh@devxt.com",
+    author="GoAI",
     packages=find_packages(),
     python_requires=">=3.10",
     install_requires=requirements,
